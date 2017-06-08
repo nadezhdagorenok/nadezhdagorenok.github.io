@@ -21,7 +21,7 @@ body {
   #top{
       visibility: hidden;
   } 
-  header{
+ header{
       height:5em;
   }
  .menu-hidden{
@@ -31,11 +31,11 @@ body {
     padding: 10px;
     margin: 0;
     box-sizing: border-box;
-    width: 180px;
+    width: 200px;
     background-color: #1976D2;
     height: 100%;
     top: 0;
-    right: -180px;
+    right: -200px;
     transition: right .2s;
     z-index: 5;
     
@@ -71,7 +71,7 @@ body {
   margin-top: 0;
 }
   .menu-ticker:checked ~ .btn-menu {
-  right: 140px;
+  right: 160px;
 }
 .menu-ticker:checked ~ .menu-hidden {
   right: 0;
@@ -87,6 +87,12 @@ body {
 .menu-ticker:checked ~ .btn-menu span.line_down {
   -webkit-transform: rotate(-45deg);
   top: -10px;
+}
+
+#menu label[for="property"]+ul{
+    position: static !important;
+    margin-top:1em;
+    
 }
 #logo{
   position: fixed;
@@ -124,7 +130,7 @@ body {
     padding: 0px;
     box-sizing: border-box;
     width: 300px;
-    margin:.5em 0;
+    margin:0 0;
     top: 7em;
     right: -40em;
     transition: right .2s;
@@ -143,7 +149,7 @@ body {
 .search-input{
       background-color: #FFF;
       color: #212121;
-      padding: .4em .4em;
+      padding: .6em .4em;
        border-radius: .4em;
 }
 .search-top>button[value="SEARCH"]{
@@ -151,11 +157,13 @@ body {
       background-color: #2196F3;
       text-align: center;
       cursor: pointer;
-      padding: .4em .4em;
+      padding: .6em .4em;
       border-radius: .4em;
   }
 
-
+.search-middle{
+    display:none;
+}
 .search-ticker{
    display:none; 
 }
@@ -167,6 +175,7 @@ body {
     right:.5em!important;
 }
 
+
  /* .logoMenu{
       display:flex;
       flex-direction: column;
@@ -174,7 +183,7 @@ body {
   }*/
   .big-block{
        flex-direction: column;
-       min-width: 100%;
+       
      
    }
    .content-aside {
@@ -187,10 +196,10 @@ body {
         
     }
     .price{
-        min-width: 100%;
+        min-width: 100%!important;
     }
     .item{
-        min-width: 100%;
+        min-width: 100%!important;
     }
     footer{
         display:none!important;
@@ -200,21 +209,26 @@ body {
 }
 }
 
-@media all and (max-width:900px){
+@media all and (max-width:960px){
      #menu ul li{
         flex:1 1 25%;
     }
     .content-aside{
-       flex-direction: column;
+       flex-flow: column;
        
    }
-   
+   .big-block{
+       flex-direction: column;
+   }
    .search{
        padding-top:8em!important;
    }
+   .item{
+        min-width: 100%!important;
+    }
    
    main{
-       min-width: 50%;
+       min-width: 50%!important;
    }
     aside{
         min-width: 90%;
@@ -226,7 +240,7 @@ body {
 .price{
     min-width:46%;
 }
-.price:last-of-type{
+.price:last-of-type, .price:nth-of-type(2){
     margin-top: 2em;
 }
 
@@ -250,6 +264,7 @@ body {
     align-items:stretch;
 }
 
+
 header {
     flex: 2;
     display: flex;
@@ -260,6 +275,9 @@ header {
     z-index: 2;
     width:100%;
     top: 0;
+}
+.header+div{
+    width:100%;
 }
 
 .logoMenu{
@@ -282,13 +300,15 @@ header {
 #logo>.img{
     flex:1;
     padding-left: 5em;
+    padding-right: 0;
     margin:0;
-    
+    align-self: flex-end;
 }
 #logo>.logoname{
     flex:5;
     margin:0; padding:0;
-    
+    font-size: 1.2em;
+   align-self: flex-end;
 }
 
 
@@ -330,6 +350,7 @@ header {
 }
 #menu>li{
     position: relative;
+    width: 100%;
     
 }
 #menu input[type=checkbox]{
@@ -339,7 +360,6 @@ header {
 #menu label[for="property"], #menu a{
     position: relative;
     cursor:pointer;
-    
     padding: 1em;
 }
 #menu label[for="property"]+ul{
@@ -347,7 +367,10 @@ header {
     background-color: #FFF;
     display:none;
     padding: 0 !important;
-    transition: all .25s ease .1s;}
+   
+    transition: all .25s ease .1s;
+    color:#212121;
+}
     
   /*  transition: all 3s ease;
     transform: scale(0);
@@ -359,6 +382,7 @@ header {
 #menu input[type=checkbox]:checked + label:nth-of-type(n) + ul{  /*реализует механизм выпадения*/
     display:block;
     z-index:3;
+    transform: scaleY(1);
     
 }
  #menu label[for="property"]:after {
@@ -396,12 +420,13 @@ header {
   margin:0 auto;
   padding-right: 2em;
   padding-top: 2em;
+  
 }
  
 
 #menu ul li{
         list-style:none;
-    	font-size: 12px;
+    	font-size: .8em;
     	font-weight: 300;
 		padding: 1em 2em;
 		align-self: center;
@@ -421,14 +446,19 @@ header {
 	color: rgba(255, 255, 255, 0.78);
 	text-decoration:none;
 	text-transform:uppercase;
-	align-self: center;	
+	
+	
+}
+#menu ul li:hover{
+    color: #FFF;
+    /*transition: transform .5s, background-color 1s ease-in .5s; */
+    
+    border-bottom: .1em solid #FF4081;
 }
 #menu ul li a:hover, #menu label[for="property"]:hover{
-    background-color: #FFF;
-    color:#212121;
-    /*transition: transform .5s, background-color 1s ease-in .5s; */
-    padding: 1em 1em;
+    color:#FFF;
 }
+
   
     #menu ul li ul li a{
             display:block;
@@ -439,10 +469,17 @@ header {
         }
         #menu ul li ul li:first-child a {
             border-top:0px;
+            
         }
         #menu ul li ul li a:hover{
-            background: #FF4081;
-            color:#fff;
+            color:#212121;
+        }
+        #menu ul li ul li a {
+            border-top:0px;
+            width:6em;
+            padding:1em 0;
+            font-size: 1.2em;
+            
         }
 
 #menu ul .current, label[for="property"]{
@@ -465,7 +502,7 @@ input#hmt{
     width: 100vw;
     color: rgba(255, 255, 255, 0.78);
     background-color: #1976D2;
-   
+    padding-right: 1em;
     
 }
 #top * {
@@ -473,7 +510,7 @@ input#hmt{
     font-size: small;
 }
 #top a:last-of-type{
-   padding-right: 1em;
+   padding-right: 2em;
 }
 
 .map{
@@ -516,7 +553,6 @@ ul li{
    text-decoration: none;
    color: #FFF;
 }
-
 /*Flexbox - content*/
 
 .content{
@@ -726,11 +762,11 @@ main{
 }
 .big-block{
     display:flex;
-    
+    justify-content: space-between;
 }
 
 .item {
-    margin: 1em;
+    margin: 1em 0;
     width:31%;
     color: #bdbdbd;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -864,7 +900,7 @@ main{
 .choose-price{
     display:flex;
     flex-flow: row wrap;
-    margin:1em;
+    margin:0;
     justify-content: flex-start;
    align-items:stretch;
 }
@@ -885,6 +921,7 @@ main{
     align-items: stretch;
     justify-content: space-between;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   
 }
 .price {
     width:31%;
@@ -899,6 +936,7 @@ main{
     justify-content: center;
     background-color: #FFF;
     padding: 1em;
+    
 }
 
 .price div:nth-of-type(2n+1){
