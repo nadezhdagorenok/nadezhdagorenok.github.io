@@ -231,7 +231,7 @@ body {
        min-width: 50%!important;
    }
     aside{
-        min-width: 90%;
+        min-width: 100%;
     }
    
     .photo img{
@@ -1000,7 +1000,7 @@ main{
 aside{
     flex:2;
     align-self: flex-start;
-    margin:1em;
+    margin:2em;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
