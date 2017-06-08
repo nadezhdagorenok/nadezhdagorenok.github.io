@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Property</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style_rent.css">
+        
+        <script src="https://use.fontawesome.com/744b749621.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                    <div aria-busy="true" aria-label="Loading, please wait." role="progressbar"></div>
+                        <nav id="top">
+                            <div class="map"><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i> Properties on the map</a></div>
+                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</div>
+                            <div class="favorities"><a href=""><i class="fa fa-star" aria-hidden="true"></i>Favorities</a></div>
+                            <div class="profile"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></div>
+                            <div class="cabinet"><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i>Log/Sign up</a></div>
+                            <a href="https://www.facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </nav>
+                    
+                  <div class="logoMenu">
+                    <div id="logo">
+                    <figure class="img"><a href="" target="" ><img src="assets/img/house.svg" title="Property" alt="Property" width="50" height="50"></a></figure>
+                    <span class="logoname"><a href="" target="" >BestHome</a></span>
+                    </div>
+                        <input type="checkbox" id="sh" class="search-ticker">
+                        <label class="search-ticker-line" for="sh">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                        <form method=get action='FindProperty.php' class="search-top">
+                            <input type="text" name="q" class="search-input" placeholder="Type to search"><button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button> 
+                            </form>
+                    <nav id="menu">
+                        <input type="checkbox" id="hmt" class="menu-ticker">
+                        <label class="btn-menu" for="hmt">
+                        <span class="line_up"></span>
+                        <span class="line_middle"></span>
+                        <span class="line_down"></span>
+                        </label>
+                        <ul class="menu-hidden">
+                        <li><a href="index.html" title="" class="current">HOME</a></li>
+                        <li><a href="about.html" title="">ABOUT US</a></li>
+                        <li><a href="services.html" title="">SERVICES</a></li>
+                        <li>
+                            <input type="checkbox" name ="property" id="property">
+                            <label for="property">PROPERTY</label>
+                              <ul>
+                              <li><a href="index_rent.html">For rent</a></li>
+                              <li><a href="index_sale.html">For sale</a></li>
+                              </ul>  
+                            
+                        </li>  
+                        <li><a href="news.html" title="">NEWS</a></li>
+                        <li><a href="contact.html" title="">CONTACT</a></li>
+                       </ul>
+                    
+                    </nav> 
+                     <div class="submit"><a href="submit.html" title="Add new property" ><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x" aria-hidden="true"></i></span></a></div>
+                    </div>
+              
+            </header>
+              <div class="content">
+                <div class="content-aside">
+                    <!--<form method=get action='FindProperty.php' class="search-middle">
+                            <input type="text" name="q" class="search-input" placeholder="Type to search"><button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button> 
+                            </form>
+                            -->
+                           
+
+                    <main>
+                        
+                      <div class="rent">Properties for RENT</div>
+                       <div class="item">
+                            <figure class="click">
+                             <img src="assets/img/home6.jpg" alt="" class="click">
+                            </figure>
+                           
+                            
+                            <div class="item_first">
+                                <div><a href="index_OldHause.html" title="">Old hause</a></div>
+                                <div>Poland / Bialystok/ Lesna 16</div>
+                                <div>This apartment is located on the west of Poland. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</div>
+                                <div class="item_info">
+                                    <div><i class="fa fa-info" aria-hidden="true"></i> Appartment</div>
+                                    <div><i class="fa fa-money" aria-hidden="true"></i> <i class="fa fa-usd" aria-hidden="true"></i> 350,000</div>
+                                    <div><i class="fa fa-arrows" aria-hidden="true"></i> 300 m2</div>
+                                    <div>Rent</div>
+                                    
+                                  </div>
+                            </div>
+                                
+                        </div>
+                           <!-- <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>-->
+                       
+                        
+                        
+                        <div class="item">
+                            <figure>
+                            <img src="assets/img/home8.jpg" alt="">
+                            </figure>
+                            <div class="item_first">
+                                <div><a href="" title="">Five stars</a></div>
+                                <div>Switzerland / Grossestadt/ Mystrasse 98</div>
+                                <div>This apartment is located on the west of Poland. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</div>
+                                <div class="item_info">
+                                    <div><i class="fa fa-info" aria-hidden="true"></i> Appartment</div>
+                                    <div><i class="fa fa-money" aria-hidden="true"></i> <i class="fa fa-usd" aria-hidden="true"></i> 350,000</div>
+                                    <div><i class="fa fa-arrows" aria-hidden="true"></i> 300 m2</div>
+                                    <div>Rent</div>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="item">
+                            <figure>
+                            <img src="assets/img/home3.jpg" alt="">
+                            </figure>
+                            <div class="item_first">
+                                <div><a href="" title="">Green villa</a></div>
+                                <div>Austria / Viena/ Scalna 20</div>
+                                <div>This apartment is located on the west of Poland. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</div>
+                                <div class="item_info">
+                                    <div><i class="fa fa-info" aria-hidden="true"></i> Villa</div>
+                                    <div><i class="fa fa-money" aria-hidden="true"></i> <i class="fa fa-usd" aria-hidden="true"></i> 350,000</div>
+                                    <div><i class="fa fa-arrows" aria-hidden="true"></i> 300 m2</div>
+                                    <div>Rent</div>
+                                  </div>
+                            </div>
+                            </div>
+                        <div class="item">
+                            <figure>
+                            <img src="assets/img/home4.jpg" alt="">
+                            </figure>
+                            <div class="item_first">
+                                <div><a href="" title="">Your dream</a></div>
+                                <div>Germany / Bremen/ Bundestag 45</div>
+                                <div>This apartment is located on the west of Poland. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</div>
+                                <div class="item_info">
+                                    <div><i class="fa fa-info" aria-hidden="true"></i> Villa</div>
+                                    <div><i class="fa fa-money" aria-hidden="true"></i> <i class="fa fa-usd" aria-hidden="true"></i> 350,000</div>
+                                    <div><i class="fa fa-arrows" aria-hidden="true"></i> 300 m2</div>
+                                    <div>Rent</div>
+                                  </div>
+                            </div>
+                            </div>
+                     
+                     </main>
+                    
+                    <aside>
+                        <div class="best">Our Agents</div>
+                        <div class="agents">
+                            <div class="agent">
+                                   <div class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="50px" height="50px"></div>
+                                    <div class="connect first">
+                                      <div>Nadezhda Gorenok</div>
+                                      <div>@ Email Address</div>
+                                      <div><i class="fa fa-phone" aria-hidden="true"></i> 29-996-87-68</div>
+                                    </div>
+                            </div>
+                            <div class="agent">
+                                 <div class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="50" height="50px"></div>
+                                 <div class="connect second">
+                                   <div>Katerina Novik</div>
+                                   <div>@ Email Address</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-999-90-58</div>
+                                 </div>
+                            </div>
+                            <div class="agent">
+                                  <div class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="50" height="50px"></div>
+                                  <div class="connect third">
+                                   <div>Svetlana Krupskaya</div>
+                                   <div>@ Email Address</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-915-90-60</div>
+                                  </div>
+                                 </div>
+                        </div>
+                        
+                    </aside> 
+                </div>
+          </div>
+        <footer>
+            <nav class="footer_menu">
+                <div class="footer_menu_sub"><h5>Locations</h5>
+                <ul>
+                    <li><a href="" title="">Belarus</a></li>
+                    <li><a href="" title="">Poland</a></li>
+                    <li><a href="" title="">Germany</a></li>
+                    <li><a href="" title="">Switzerland</a></li>
+                    <li><a href="" title="">Austria</a></li>
+                </ul>
+                </div>
+            
+                <div class="footer_menu_sub"><h5>Property types</h5>
+                  <ul>
+                     <li><a href="" title="">Commercial</a>
+                       <ul>
+                       <li><a href="" title="">Shop</a></li>
+                       <li><a href="" title="">Office</a></li>
+                       </ul>
+                    </li>
+                     <li><a href="" title="">Residencial</a>
+                     <ul>
+                       <li><a href="" title="">Apartment</a></li>
+                       <li><a href="" title="">Condo</a></li>
+                       <li><a href="" title="">Villa</a></li>
+                       </ul>
+                     </li>
+                  </ul>
+                  </div>
+                 <div class="footer_menu_sub"><h5>Property statuses</h5>
+                      <ul>
+                       <li><a href="rent.html" title="">For rent</a></li>
+                       <li><a href="sale.html" title="">For sale</a></li>
+                       </ul>
+                 </div>
+                 <div class="footer_menu_sub"><h5>Connect with us</h5>
+                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a> 
+                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype" aria-hidden="true"></i></a> 
+                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+                 </div>
+            </nav>
+            <div>&copy; 2017 Created by Nadezhda Gorenok</div>
+        </footer>
+    </div>
+    
+            <script>
+$(window).load(function() {
+$('#preloaders').find('img').fadeOut().end().delay(400).fadeOut('slow');
+});
+</script>
+   
+</body>
+</html>

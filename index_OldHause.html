@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>OldHaus</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style_OldHause.css">
+        <script src="https://use.fontawesome.com/744b749621.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                        <nav id="top">
+                            <div class="map"><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i> Properties on the map</a></div>
+                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</div>
+                            <div class="favorities"><a href=""><i class="fa fa-star" aria-hidden="true"></i>Favorities</a></div>
+                            <div class="profile"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></div>
+                            <div class="cabinet"><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i>Log/Sign up</a></div>
+                            <a href="https://www.facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </nav>
+                    
+                  <div class="logoMenu">
+                    <div id="logo">
+                    <figure class="img"><a href="" target="" ><img src="assets/img/house.svg" title="Property" alt="Property" width="50" height="50"></a></figure>
+                    <span class="logoname"><a href="" target="" >BestHome</a></span>
+                    </div>
+                        <input type="checkbox" id="sh" class="search-ticker">
+                        <label class="search-ticker-line" for="sh">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                        <form method=get action='FindProperty.php' class="search-top">
+                            <input type="text" name="q" class="search-input" placeholder="Type to search"><button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button> 
+                            </form>
+                    <nav id="menu">
+                        <input type="checkbox" id="hmt" class="menu-ticker">
+                        <label class="btn-menu" for="hmt">
+                        <span class="line_up"></span>
+                        <span class="line_middle"></span>
+                        <span class="line_down"></span>
+                        </label>
+                        <ul class="menu-hidden">
+                        <li><a href="index.html" title="" class="current">HOME</a></li>
+                        <li><a href="about.html" title="">ABOUT US</a></li>
+                        <li><a href="services.html" title="">SERVICES</a></li>
+                        <li>
+                            <input type="checkbox" name ="property" id="property">
+                            <label for="property">PROPERTY</label>
+                              <ul>
+                              <li><a href="index_rent.html">For rent</a></li>
+                              <li><a href="index_sale.html">For sale</a></li>
+                              </ul>  
+                            
+                        </li>  
+                        <li><a href="news.html" title="">NEWS</a></li>
+                        <li><a href="contact.html" title="">CONTACT</a></li>
+                       </ul>
+                    
+                    </nav> 
+                     <div class="submit"><a href="submit.html" title="Add new property" ><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x" aria-hidden="true"></i></span></a></div>
+                    </div>
+              
+            </header>
+              <div class="content">
+                <div class="content-aside">
+                    <main>
+                      <div class="propertyDetail">Property detail</div>
+                        <div class="item">
+                            <div class="slider">
+                                <input type="radio" name="slider" id="slide1" checked="checked">
+                                <input type="radio" name="slider" id="slide2">
+                                <input type="radio" name="slider" id="slide3">
+                                <input type="radio" name="slider" id="slide4">
+                                <input type="radio" name="slider" id="slide5">
+                                <div class="slides">
+                                <div class="overflow">
+                                  <div class="block">
+                                      
+                                      <div class="letter">
+                                        <img id="img1" src="assets/img/home1.jpg">
+                                    </div>
+                                      <div class="letter">
+                                          <img id="img2" src="assets/img/home2.jpg">
+                                      </div>
+                                          <div class="letter">
+                                        <img id="img3" src="assets/img/home3.jpg">
+                                           </div>
+                                         <div class="letter">
+                                        <img id="img4" src="assets/img/home4.jpg">
+                                     </div>
+                                   <div class="letter">
+                                  <img id="img5" src="assets/img/home5.jpg">
+                                </div>
+                  
+                              </div>
+              
+                         </div>
+                        </div>   
+        
+        <div class="arrows">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+        </div>
+        <div class="pins">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+        </div>
+        
+    </div>
+                       
+          
+       
+                       
+                  <div  class="detail">
+                        <div class="overview">Old haus</div>
+                        <div class="detail-block">
+                            <div>Price</div>
+                            <div><i class="fa fa-usd" aria-hidden="true"></i> 28,000</div> 
+                        </div>
+                        <div class="detail-block">
+                        <div>Country</div>
+                        <div>Belarus</div>
+                        </div>
+                        <div class="detail-block">
+                        <div>Location</div>
+                        <div>Minsk</div>
+                        </div>
+                        <div class="detail-block">
+                        <div>Status</div>
+                        <div>For Rent</div>
+                        </div>
+                        <div class="detail-block">
+                        <div>Type</div>
+                        <div>Apartment</div>
+                        </div>  
+                        <div class="detail-block">
+                        <div>Area</div>
+                        <div>300sqft</div>
+                        </div>
+                        <div class="detail-block">
+                        <div>Garages</div>
+                        <div>1</div>
+                        </div>
+                        <div class="detail-block">
+                        <div>Beds</div>
+                        <div>3</div>
+                        </div>   
+                        <div class="detail-block">
+                        <div>Baths</div>
+                        <div>1</div>
+                        </div>
+                       </div>
+                </div>        
+                        <div class="description">Description</div>
+                    <div class="description-item">The Old Haus was built in 2010. It's very big haus. It consist on 3 rooms. It has very beautiful backyard. This haus has all nesessary stuffs. It's very modern building. It has fresh decoration. It has 3 big rooms with french windows, 1 bathroom and 1 garage. It has all comfortable furniture. This haus has all conditions for very comfortable and good life. Lots of shopcenters are located near this haus. It has very nice neighbors. </div>
+                                
+                    <div class="facilities">Facilities</div>
+                    <div class="facilities-detail">
+                    <ul>
+                        <li>Conditioning</li>
+                        <li>TV</li>
+                        <li>Internet</li>
+                        <li>Parking</li>
+                        <li>Washing machine</li>
+                        <li>Microvawe</li>
+                        <li>Oven</li>
+                        <li>Fridge</li>
+                        <li>Pool</li>
+                        <li>Balcony</li>
+                        <li>Lift</li>
+                        <li>Terrace</li>
+                        <li>Backyard</li>
+                        <li>Fireplace</li>
+                        <li>Basement</li>
+                    </ul>    
+                    </div>
+                    <div class="position">Position on the map</div> 
+                    <div class="item">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.661979406541!2d27.432054115860794!3d53.9377488801072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc4c002541473%3A0xa038cc28e61a8893!2z0YPQuy4g0JLRj9C30YvQvdGB0LrQsNGPLCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1496327503723" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen width=100%></iframe>
+                    </div>
+                        
+                        
+                           
+                            
+                   
+                 
+                        
+                        
+                    </main>
+                    
+                    <aside>
+                        <div class="best">Our Agents</div>
+                        <div class="agents">
+                            <div class="agent">
+                                   <div class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width=60 height=60></div>
+                                    <div class="connect first">
+                                      <div>Nadezhda Gorenok</div>
+                                      <div>@ Email Address</div>
+                                      <div><i class="fa fa-phone" aria-hidden="true"></i> 29-996-87-68</div>
+                                    </div>
+                            </div>
+                            <div class="agent">
+                                 <div class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width=60 height=60></div>
+                                 <div class="connect second">
+                                   <div>Katerina Novik</div>
+                                   <div>@ Email Address</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-999-90-58</div>
+                                 </div>
+                            </div>
+                            <div class="agent">
+                                  <div class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width=60 height=60></div>
+                                  <div class="connect third">
+                                   <div>Svetlana Krupskaya</div>
+                                   <div>@ Email Address</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-915-90-60</div>
+                                  </div>
+                            </div>
+                        </div>
+                        
+                    </aside> 
+                </div>
+          </div>
+          </div>
+        <footer>
+            <nav class="footer_menu">
+                <div class="footer_menu_sub"><h5>Locations</h5>
+                <ul>
+                    <li><a href="" title="">Belarus</a></li>
+                    <li><a href="" title="">Poland</a></li>
+                    <li><a href="" title="">Germany</a></li>
+                    <li><a href="" title="">Switzerland</a></li>
+                    <li><a href="" title="">Austria</a></li>
+                </ul>
+                </div>
+            
+                <div class="footer_menu_sub"><h5>Property types</h5>
+                  <ul>
+                     <li><a href="" title="">Commercial</a>
+                       <ul>
+                       <li><a href="" title="">Shop</a></li>
+                       <li><a href="" title="">Office</a></li>
+                       </ul>
+                    </li>
+                     <li><a href="" title="">Residencial</a>
+                     <ul>
+                       <li><a href="" title="">Apartment</a></li>
+                       <li><a href="" title="">Condo</a></li>
+                       <li><a href="" title="">Villa</a></li>
+                       </ul>
+                     </li>
+                  </ul>
+                  </div>
+                 <div class="footer_menu_sub"><h5>Property statuses</h5>
+                      <ul>
+                       <li><a href="rent.html" title="">For rent</a></li>
+                       <li><a href="sale.html" title="">For sale</a></li>
+                       </ul>
+                 </div>
+                 <div class="footer_menu_sub"><h5>Connect with us</h5>
+                 
+                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a> 
+                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype" aria-hidden="true"></i></a> 
+                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+                 
+                 </div>
+            </nav>
+            <div>&copy; 2017 Created by Nadezhda Gorenok</div>
+        </footer>
+    </div>
+</body>
+</html>

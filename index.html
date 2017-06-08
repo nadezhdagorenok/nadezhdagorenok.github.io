@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Property</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://use.fontawesome.com/744b749621.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                        <nav id="top">
+                            <div class="map"><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i> Properties on the map</a></div>
+                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</div>
+                            <div class="favorities"><a href=""><i class="fa fa-star" aria-hidden="true"></i>Favorities</a></div>
+                            <div class="profile"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></div>
+                            <div class="cabinet"><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i>Log/Sign up</a></div>
+                            <a href="https://www.facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </nav>
+                    
+                  <div class="logoMenu">
+                    <div id="logo">
+                    <figure class="img"><a href="" target="" ><img src="assets/img/house.svg" title="Property" alt="Property" width="50" height="50"></a></figure>
+                    <span class="logoname"><a href="" target="" >BestHome</a></span>
+                    </div>
+                        <input type="checkbox" id="sh" class="search-ticker">
+                        <label class="search-ticker-line" for="sh">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                        <form method=get action='FindProperty.php' class="search-top">
+                            <input type="text" name="q" class="search-input" placeholder="Type to search"><button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button> 
+                            </form>
+                    <nav id="menu">
+                        <input type="checkbox" id="hmt" class="menu-ticker">
+                        <label class="btn-menu" for="hmt">
+                        <span class="line_up"></span>
+                        <span class="line_middle"></span>
+                        <span class="line_down"></span>
+                        </label>
+                        <ul class="menu-hidden">
+                        <li><a href="index.html" title="" class="current">HOME</a></li>
+                        <li><a href="about.html" title="">ABOUT US</a></li>
+                        <li><a href="services.html" title="">SERVICES</a></li>
+                        <li>
+                            <input type="checkbox" name ="property" id="property">
+                            <label for="property">PROPERTY</label>
+                              <ul>
+                              <li><a href="index_rent.html">For rent</a></li>
+                              <li><a href="index_sale.html">For sale</a></li>
+                              </ul>  
+                            
+                        </li>  
+                        <li><a href="news.html" title="">NEWS</a></li>
+                        <li><a href="contact.html" title="">CONTACT</a></li>
+                       </ul>
+                    
+                    </nav> 
+                     <div class="submit"><a href="submit.html" title="Add new property" ><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x" aria-hidden="true"></i></span></a></div>
+                    </div>
+              
+            </header>
+              <div class="content">
+                  <div class="search">
+                    
+                     <form method=get action='FindProperty.php' class="search-content">
+                        <select name='location'>
+                            <option value=1 selected>Location (any)</option>
+                            <option value=2>Belarus</option>
+                            <option value=3>Poland</option>
+                            <option value=2>Switzerland</option>
+                            <option value=3>Austria</option>
+                        </select>
+                        <select name='propertyType' multiply>
+                            <option value=1a selected>Property type (any)</option>
+                            <optgroup label=Commercial>
+                            <option value=1b>Office</option>
+                            <option value=1c>Shop</option>
+                            </optgroup>
+                            <optgroup label=Residencial>
+                            <option value=1d>Apartment</option>
+                            <option value=1e>Condo</option>
+                            <option value=1f>Villa</option>
+                            </optgroup>
+                        </select>
+                        <select name='propertyStatus'>
+                            <option value=2a selected>Property status (any)</option>
+                            <option value=2b>For rent</option>
+                            <option value=2c>For sale</option>
+                        </select>
+                        <button type='button' value='EXTRA'><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                       <button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button>
+                        <!--Дополнительная кнопка расширенного поиска
+                        <a href="#extra">для buttonEXTRA</a>
+                        <div id="extra">
+                        <select name='minBeds'>
+                            <option value=3a selected>Min beds (any)</option>
+                            <option value=3b>1</option>
+                            <option value=3c>2</option>
+                            <option value=3d>3</option>
+                            <option value=3e>4</option>
+                            <option value=3c>5</option>
+                            <option value=3d>6</option>
+                            <option value=3e>7</option>
+                        </select>
+                        <select name='minBaths'>
+                            <option value=4a selected>Min baths (any)</option>
+                            <option value=4b>1</option>
+                            <option value=4c>2</option>
+                            <option value=4d>3</option>
+                            <option value=4e>4</option>
+                            <option value=4f>5</option>
+                            <option value=4g>6</option>
+                        </select>
+                        <select name='minPrice'>
+                            <option value=5a selected>Min price (any)</option>
+                            <option value=5b>1,000</option>
+                            <option value=5c>5,000</option>
+                            <option value=5d>10,000</option>
+                            <option value=5e>50,000</option>
+                            <option value=5f>100,000</option>
+                            <option value=5g>200,000</option>
+                            <option value=5i>300,000</option>
+                        </select>
+                        <select name='maxPrice'>
+                            <option value=6a selected>Max price (any)</option>
+                            <option value=6b>5,000</option>
+                            <option value=6c>10,000</option>
+                            <option value=6d>50,000</option>
+                            <option value=6e>100,000</option>
+                            <option value=6f>200,000</option>
+                            <option value=6g>300,000</option>
+                            <option value=6i>400,000</option>
+                        </select> </div>-->
+                        
+                     </form>
+                    </div>
+                    
+                    <!--<div class="search_big">
+                            <div class="search_small">
+                               <ul class="search_smaller">
+                                   <li class="attribute">Location (any)</li>
+                                   <li class="attribute">Property type (any) <a href="#type"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                     <ul id="type">
+                                         <li>Commercial
+                                           <ul>
+                                               <li>Office</li>
+                                               <li>Shop</li>
+                                           </ul>
+                                         
+                                         </li>
+                                         <li>Rezedential
+                                            <ul>
+                                               <li>Apartment</li>
+                                               <li>Condo</li>
+                                               <li>Villa</li>
+                                           </ul>
+                                         </li>
+                                     </ul>
+                                   </li>
+                                   <li class="attribute">Property status (any) <a href="#status"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                         <ul id="status">
+                                         <li><a href="rent.html">For rent</a></li>
+                                         <li><a href="sale.html">For sale</a></li>
+                                         </ul>
+                                   <li class="add"><a href="#add"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                                   <li class="find"><i class="fa fa-search" aria-hidden="true"></i> Search</li>
+                                   
+                               </ul>
+                            </div>
+                            <div class="search_small_extra" id="add">
+                                
+                                    <div class="search_smaller">
+                                       
+                                    <div class="attribute">Min beds (any)</div>
+                                   <div class="attribute">Min baths (any)</div>
+                                   <div class="attribute">Min price (any)</div>
+                                   <div class="attribute">Max price (any)</div>
+                                   </div>
+                                
+                            </div>
+                        </div> -->
+                        
+                        
+                    </div>
+                <div class="content-aside">
+                    <main>
+                      <section class="big-block">
+                        <div class="item">
+                            <div>
+                            <a href="" title="" class="img-link">
+                            <img src="assets/img/home7.jpg" alt="">
+                            <div class="cover-bg"></div>
+                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            </a>
+                            </div>
+                            <div class="item_first">
+                                <div class="item_first_element">
+                                   <div class="info1">Baths</div>
+                                   <div class="info1">Beds</div>
+                                   <div class="info1">Garages</div>
+                                </div>
+                                <div class="item_first_element">
+                                   <div class="info2">2</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">1</div>
+                                </div>
+                            </div>
+                            <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="item">
+                            <div>
+                            <a href="" title="" class="img-link">
+                            <img src="assets/img/home8.jpg" alt="">
+                            <div class="cover-bg"></div>
+                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            </a>
+                            </div>
+                            <div class="item_first">
+                                <div class="item_first_element">
+                                   <div class="info1">Baths</div>
+                                   <div class="info1">Beds</div>
+                                   <div class="info1">Garages</div>
+                                </div>
+                                <div class="item_first_element">
+                                   <div class="info2">2</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">1</div>
+                                </div>
+                            </div>
+                            <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                            <a href="" title="" class="img-link">
+                            <img src="assets/img/home3.jpg" alt="">
+                            <div class="cover-bg"></div>
+                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            </a>
+                            </div>
+                            <div class="item_first">
+                                <div class="item_first_element">
+                                   <div class="info1">Baths</div>
+                                   <div class="info1">Beds</div>
+                                   <div class="info1">Garages</div>
+                                </div>
+                                <div class="item_first_element">
+                                   <div class="info2">2</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">1</div>
+                                </div>
+                            </div>
+                            <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>
+                        </div>
+                      </section>
+                      <section class="big-block">
+                        <div class="item">
+                            <div>
+                            <a href="" title="" class="img-link">
+                            <img src="assets/img/home4.jpg" alt="">
+                            <div class="cover-bg"></div>
+                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            </a>
+                            </div>
+                            <div class="item_first">
+                                <div class="item_first_element">
+                                   <div class="info1">Baths</div>
+                                   <div class="info1">Beds</div>
+                                   <div class="info1">Garages</div>
+                                </div>
+                                <div class="item_first_element">
+                                   <div class="info2">2</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">1</div>
+                                </div>
+                            </div>
+                            <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="item">
+                            <div>
+                            <a href="" title="" class="img-link">
+                            <img src="assets/img/home5.jpg" alt="">
+                            <div class="cover-bg"></div>
+                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            </a>
+                            </div>
+                            <div class="item_first">
+                                <div class="item_first_element">
+                                   <div class="info1">Baths</div>
+                                   <div class="info1">Beds</div>
+                                   <div class="info1">Garages</div>
+                                </div>
+                                <div class="item_first_element">
+                                   <div class="info2">2</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">1</div>
+                                </div>
+                            </div>
+                            <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                            <a href="" title="" class="img-link">
+                            <img src="assets/img/home6.jpg" alt="">
+                            <div class="cover-bg"></div>
+                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            </a>
+                            </div>
+                            <div class="item_first">
+                                <div class="item_first_element">
+                                   <div class="info1">Baths</div>
+                                   <div class="info1">Beds</div>
+                                   <div class="info1">Garages</div>
+                                </div>
+                                <div class="item_first_element">
+                                   <div class="info2">2</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">1</div>
+                                </div>
+                            </div>
+                            <div class="item_second">
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
+                                   <div><a href="" title="">View detail</a></div>
+                            </div>
+                        </div>
+                      </section>
+                      
+                    <section class="choose-price">
+                      <div>Pricing</div>
+                      <div class="all-prices">
+                        <div class="price">
+                            <div>Basic</div>
+                            <div><i class="fa fa-usd" aria-hidden="true"></i> 10</div>
+                            <div>per month</div>
+                            <div><a href="" title="">Get started</a></div>
+                            <div>15 properties</div>
+                        </div> 
+                         <div class="price">
+                            <div>Standart</div>
+                            <div><i class="fa fa-usd" aria-hidden="true"></i> 20</div>
+                            <div>per month</div>
+                            <div><a href="" title="">Get started</a></div>
+                            <div>55 properties</div>
+                        </div> 
+                         <div class="price">
+                            <div>Premium</div>
+                            <div><i class="fa fa-usd" aria-hidden="true"></i> 30</div>
+                            <div>per month</div>
+                            <div><a href="" title="">Get started</a></div>
+                            <div>75 properties</div>
+                        </div> 
+                      </div> 
+                    </section>
+                   </main>
+                    
+                    <aside>
+                        <div class="best">Best Agents</div>
+                        <div class="agents">
+                            <div class="agent">
+                                   <div class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="50px" height="50px"></div>
+                                    <div class="connect first">
+                                      <div>Nadezhda Gorenok</div>
+                                      <div>@ Email Address</div>
+                                      <div><i class="fa fa-phone" aria-hidden="true"></i> 29-996-87-68</div>
+                                    </div>
+                            </div>
+                            <div class="agent">
+                                 <div class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="50" height="50px"></div>
+                                 <div class="connect second">
+                                   <div>Katerina Novik</div>
+                                   <div>@ Email Address</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-999-90-58</div>
+                                 </div>
+                            </div>
+                            <div class="agent">
+                                  <div class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="50" height="50px"></div>
+                                  <div class="connect third">
+                                   <div>Svetlana Krupskaya</div>
+                                   <div>@ Email Address</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-915-90-60</div>
+                                  </div>
+                                 </div>
+                        </div>
+                        <div class="email">
+                            <form method=get action='emailSabscribe.php'>
+                            <input type="email" name="emailaddress" placeholder="Email addres here" class="email" required />
+                            <input type="submit" value="SUBSCRIBE"> 
+                            </form>
+                        </div>
+                    </aside> 
+                </div>
+                          
+        <footer>
+            <nav class="footer_menu">
+                <div class="footer_menu_sub"><h5>Locations</h5>
+                <ul>
+                    <li><a href="" title="">Belarus</a></li>
+                    <li><a href="" title="">Poland</a></li>
+                    <li><a href="" title="">Germany</a></li>
+                    <li><a href="" title="">Switzerland</a></li>
+                    <li><a href="" title="">Austria</a></li>
+                </ul>
+                </div>
+            
+                <div class="footer_menu_sub"><h5>Property types</h5>
+                  <ul>
+                     <li><a href="" title="">Commercial</a>
+                       <ul>
+                       <li><a href="" title="">Shop</a></li>
+                       <li><a href="" title="">Office</a></li>
+                       </ul>
+                    </li>
+                     <li><a href="" title="">Residencial</a>
+                     <ul>
+                       <li><a href="" title="">Apartment</a></li>
+                       <li><a href="" title="">Condo</a></li>
+                       <li><a href="" title="">Villa</a></li>
+                       </ul>
+                     </li>
+                  </ul>
+                  </div>
+                 <div class="footer_menu_sub"><h5>Property statuses</h5>
+                      <ul>
+                       <li><a href="index_rent.html" title="">For rent</a></li>
+                       <li><a href="index_sale.html" title="">For sale</a></li>
+                       </ul>
+                 </div>
+                 <div class="footer_menu_sub"><h5>Connect with us</h5>
+                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a> 
+                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype" aria-hidden="true"></i></a> 
+                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+                 </div>
+            </nav>
+            <div>&copy; 2017 Created by Nadezhda Gorenok</div>
+        </footer>
+    </div>
+</body>
+</html>
