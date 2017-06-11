@@ -6,13 +6,19 @@
         <title>Property</title>
         <link rel="stylesheet" type="text/css" href="assets/css/header-footer.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        
         <script src="https://use.fontawesome.com/744b749621.js"></script>
+        <script src="assets/js/preloader.js"></script>
     </head>
     <body>
+        
+       <!-- <div class="preloader" id="preloader-item">
+            <div class="loader"></div>
+        </div>-->
         <div class="container">
             <header class="header">
                         <nav id="top">
-                            <div class="map"><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i> Properties on the map</a></div>
+                            <div class="map"><a href="#map"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Properties on the map</span></a></div>
                             <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</div>
                             <div class="favorities"><a href=""><i class="fa fa-star" aria-hidden="true"></i>Favorities</a></div>
                             <div class="profile"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></div>
@@ -21,15 +27,22 @@
                             <a href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </nav>
+                        <a href="#x" class="overlay" id="map"></a>
+                        <div class="modal">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16441918.400427805!2d20.58969477682223!3d53.25691012440904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfc43674fc2f%3A0x62bf393309c8a213!2svulica+Lienina%2C+Minsk!5e0!3m2!1sen!2sby!4v1497108464504" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <a class="close" title="Close" href="#close"></a>
+                        </div>
+                         
                     
                   <div class="logoMenu">
                     <div id="logo">
                     <figure class="img"><a href="" target="" ><img src="assets/img/house.svg" title="Property" alt="Property" width="50" height="50"></a></figure>
                     <span class="logoname"><a href="" target="" >BestHome</a></span>
                     </div>
+                        <div class="map-small"><a href="#map"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a></div>
                         <input type="checkbox" id="sh" class="search-ticker">
                         <label class="search-ticker-line" for="sh">
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                         </label>
                         <form method=get action='FindProperty.php' class="search-top">
                             <input type="text" name="q" class="search-input" placeholder="Type to search"><button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button> 
@@ -58,11 +71,34 @@
                        </ul>
                     
                     </nav> 
-                     <div class="submit"><a href="submit.html" title="Add new property" ><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x" aria-hidden="true"></i></span></a></div>
+                     <div class="submit"><label class="butn" for="modal-form" title="Add New Property"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></label></div>
                     </div>
+                    
+                        <div class="modal-1">
+  <input class="modal-open" id="modal-form" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-form"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Add Your Property</h2>
+        <label class="btn-close" for="modal-form" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <form method=get action='modal.php'>
+                            <input type="name" name="name" placeholder="Name*" class="name" required />
+                            <input type="email" name="emailaddress" placeholder="Email*" class="mail" required/>
+                            <textarea rows="4"  cols="50" name="subject" rows="4" cols="50" placeholder="Property description*" class="message" required/></textarea>
+                            <input type="submit" value="ADD" class="btn"> 
+                            </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+                    
               
             </header>
-              <div class="content">
+              <div class="content"><a name="movetotop"></a>
                   <div class="search">
                     
                      <form method=get action='FindProperty.php' class="search-content">
@@ -90,10 +126,9 @@
                             <option value=2b>For rent</option>
                             <option value=2c>For sale</option>
                         </select>
-                        <button type='button' value='EXTRA'><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                        <input id="extra-button" class="extra-input"><label for="extra-button"><i class="fa fa-plus-circle" aria-hidden="true"></i></label>
                        <button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button>
-                        <!--Дополнительная кнопка расширенного поиска
-                        <a href="#extra">для buttonEXTRA</a>
+                        <!--Дополнительная кнопка расширенного поиска-->
                         <div id="extra">
                         <select name='minBeds'>
                             <option value=3a selected>Min beds (any)</option>
@@ -133,7 +168,7 @@
                             <option value=6f>200,000</option>
                             <option value=6g>300,000</option>
                             <option value=6i>400,000</option>
-                        </select> </div>-->
+                        </select> </div>
                         
                      </form>
                     </div>
@@ -378,7 +413,7 @@
                         <div class="best">Best Agents</div>
                         <div class="agents">
                             <div class="agent">
-                                   <div class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="50px" height="50px"></div>
+                                   <figure class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="60px" height="60px"></figure>
                                     <div class="connect first">
                                       <div>Nadezhda Gorenok</div>
                                       <div>@ Email Address</div>
@@ -386,7 +421,7 @@
                                     </div>
                             </div>
                             <div class="agent">
-                                 <div class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="50" height="50px"></div>
+                                 <figure class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="60" height="60px"></figure>
                                  <div class="connect second">
                                    <div>Katerina Novik</div>
                                    <div>@ Email Address</div>
@@ -394,7 +429,7 @@
                                  </div>
                             </div>
                             <div class="agent">
-                                  <div class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="50" height="50px"></div>
+                                  <figure class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="60" height="60px"></figure>
                                   <div class="connect third">
                                    <div>Svetlana Krupskaya</div>
                                    <div>@ Email Address</div>
@@ -409,6 +444,7 @@
                             </form>
                         </div>
                     </aside> 
+                    <div class="totop"><a href="#movetotop"><i class="fa fa-chevron-circle-up fa-lg" aria-hidden="true"></i></a></div>
                 </div>
                           
         <footer>
@@ -447,16 +483,20 @@
                        </ul>
                  </div>
                  <div class="footer_menu_sub"><h5>Connect with us</h5>
-                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i></a> 
-                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a> 
-                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype" aria-hidden="true"></i></a> 
-                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a></span>
                  </div>
             </nav>
             <div>&copy; 2017 Created by Nadezhda Gorenok</div>
+            
         </footer>
+        
     </div>
+    
+   
 </body>
 </html>
