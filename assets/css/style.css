@@ -1439,11 +1439,10 @@ main{
 }
 .choose-price>div:first-child{
     flex:100%; 
-    margin: 1em 0 1.3em 0;
+    margin: 1em 0 1.5em 0;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
-    padding-bottom: 0.5em;
+    padding-bottom: 0;
     letter-spacing: 0.1em;
-    font-size: 1.4em;
     font-weight: 100;
     color:#BDBDBD;
 }
