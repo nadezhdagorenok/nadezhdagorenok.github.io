@@ -235,14 +235,21 @@ body {
        
    }
    aside{
-        min-width: 100%;
+        min-width: 100%!important;
+        
+        
     }
+    .agents{
+      flex-wrap:nowrap!important;  
+    }
+    main{width:100%!important;}
     .totop{
         display:none;
     }
+   
 }
 
-@media all and (max-width:965px){
+@media all and (max-width:1017px){
      #menu ul li{
         flex:1 1 25%;
     }
@@ -258,15 +265,16 @@ body {
     }
    
    main{
-       min-width: 50%!important;
+       min-width: 50%;
+       
    }
-    
+    .cabinet{
+        display:none;
+    }
    
-    .photo img{
-   
-}
 .price{
-    min-width:100%;
+    min-width:100%!important;
+    padding:0!important;
 }
 .price:last-of-type, .price:nth-of-type(2){
     margin-top: 2em;
@@ -278,9 +286,22 @@ body {
     padding:0!important;
     height:2em;
 }
-  aside{
-        min-width: 40%;
+  .aside{
+        min-width: 30%!important;
+        
+         margin-right:0!important;
     }
+    .agent{
+        flex-wrap: wrap!important;
+        
+    }
+    .connect{
+        align-self: center!important;
+        padding-left:1em!important;
+        margin-right:0!important;
+    }
+    
+    
    
    
 }
@@ -317,17 +338,19 @@ body {
 
 
 
-/*.preloader{
+.preloader{
     position:fixed;
     left:0;
     top:0;
     width:100%;
     height:100%;
     background:#2196F3;
-    opacity: .9;
+    
     z-index: 99;
     transition: 1s all;
     visibility: visible;
+    animation: 3s load linear both;
+   
 }
 .loader{
     width: 6vw;
@@ -340,7 +363,8 @@ body {
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    animation: 2s circle infinite linear;
+    animation: 2s circle infinite ease-in-out;
+   
 }
 @keyframes circle{
     from{
@@ -350,12 +374,18 @@ body {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-.done{
-    
-    opacity:0;
-    visibility:hidden;
+@keyframes load{
+    from{
+       opacity: .9;
+    }
+    to {
+        opacity: 0;z-index: -1; 
+    }
 }
-*/
+
+
+
+
 .container{
     display:flex;
     flex-flow: column nowrap;
@@ -496,7 +526,7 @@ text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
 font-size: 12px;
 }
 .close:hover {
-background-color: rgba(252, 20, 0, 0.8);
+background-color: #FF4081;
 /* крутим кнопку при наведении */
 -webkit-transform: rotate(360deg);
 -moz-transform: rotate(360deg);
@@ -567,14 +597,7 @@ transform: rotate(360deg);
     cursor:pointer;
 }
     
-    /* Стили модального окна */
-.modal-header h2 {
-    color: #555;  
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 1;    
-    margin: 0;
-}
+   
 /* кнопка закрытия окна */
 .modal-1 .btn-close {
     color: #aaa;
@@ -582,12 +605,41 @@ transform: rotate(360deg);
     font-size: 30px;
     text-decoration: none;
     position: absolute;
-    right: 5px;
+    right: 0;
     top: 0;
+   width: 20px;
+   height: 20px;
+border: 2px solid #ccc;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+-ms-border-radius: 15px;
+-o-border-radius: 15px;
+border-radius: 15px;
+background-color: rgba(61, 61, 61, 0.8);
+-webkit-box-shadow: 0px 0px 10px #000;
+-moz-box-shadow: 0px 0px 10px #000;
+box-shadow: 0px 0px 10px #000;
+text-align: center;
+font-weight: bold;
+line-height: 20px;
+/*эффект перехода при наведении */
+-webkit-transition: all ease .8s;
+-moz-transition: all ease .8s;
+-ms-transition: all ease .8s;
+-o-transition: all ease .8s;
+transition: all ease .8s;
 }
-.modal-1 .btn-close:hover {
-    color: red;
+
+.btn-close:hover {
+background-color: #FF4081;
+/* крутим кнопку при наведении */
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
 }
+
 /* слой затемнения */
 .modal-wrap:before {
     content: "";
@@ -623,12 +675,12 @@ transform: rotate(360deg);
 }
 /* элементы модального окна */
 .modal-dialog {
-    background: #fefefe;
+    background: #bdbdbd;
     border: none;
     border-radius: 5px;
     position: fixed;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
     left: 50%;
     top: -100%;
     -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
@@ -651,22 +703,6 @@ transform: rotate(360deg);
 .modal-body p {
     margin: 0;
 }
-.modal-header,
-.modal-footer {
-    padding: 20px 20px;
-}
-.modal-header {
-    border-bottom: #bdbdbd solid 1px;
-}
-.modal-header h2 {
-    font-size: 2em;
-    margin: 0;
-    text-align:center;
-}
-.modal-footer {
-    border-top: #bdbdbd solid 1px;
-    text-align: right;
-}
 
 /* кнопки */
 
@@ -679,12 +715,11 @@ transform: rotate(360deg);
 .modal-body>form{
     
     width:100%;
-    color:#fff;
+    color:#bdbdbd;
     font-size: 1.2em;
     text-transform: uppercase;
     display: flex;
     flex-flow:column wrap;
-   
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 5px;
     background-clip: padding-box;
@@ -698,21 +733,27 @@ transform: rotate(360deg);
 
 /* Поле сообщения */
 .modal-body>form>textarea{
-    background: rgba(255, 255, 255, 0.4); 
     width:100%;
-    height: 5em;
     border: 1px solid rgba(255,255,255,.6);
     border-radius: 4px;
     background-clip: padding-box; 
     display:block;
-    font-family: 'Open Sans', sans-serif;
     font-size:1em;
-    font-weight: 300;
-    color:#fff;
-    padding: 1em 0 0 1em;
-    margin-bottom:20px;
+    font-family: 'Roboto';
+    color:#757575;
+    margin-bottom:.5em;
     overflow:hidden;
     box-sizing: border-box;
+    padding: .3em 0 0 1em;
+    
+}
+.modal-body>form>textarea.message-small{
+    height: 2em;
+    
+}
+.modal-body>form>textarea.message-big{
+    height: 5em;
+    
 }
 /* Поля ввода */
 .modal-body>form>input:not(.btn) {
@@ -725,23 +766,30 @@ transform: rotate(360deg);
     background-clip: padding-box; 
     display:block;
     font-size:1em;
-    font-weight: 300;    
     color:#fff;
     box-sizing: border-box;
-    margin-bottom:20px;
+    margin-bottom:.5em;
 }
-.modal-body>form>input.name {
-    background: rgba(255, 255, 255, 0.4); 
+.modal-body>form>input.name, 
+.modal-body>form>input.mail, 
+.modal-body>form>textarea,
+.modal-body>form>select{
+    background: #2196F3; 
     padding-left:1em;
 }
-.modal-body>form>input.mail {
-    background: rgba(255, 255, 255, 0.4);
-    padding-left:1em;
+.modal-body>form>select{
+    height: 2em;
+    color: #fff;
+    font-size: 1em;
+    margin-bottom:.5em;
+    cursor:pointer;
 }
-.modal-body>form>input.message {
-    background: rgba(255, 255, 255, 0.4);
-    padding-left:1em;
+.modal-body>form>select option{
+    background-color: #fff;
+    color: #757575;
+    cursor:pointer;
 }
+
 ::-webkit-input-placeholder {
     color: #fff;
 }
@@ -755,22 +803,22 @@ transform: rotate(360deg);
     color: #fff; 
 }
 input:focus, textarea:focus { 
-    background-color: #FFF !important;
+    background-color: #fff !important;
     color: #757575!important;
     box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
     overflow: hidden; 
 }
 input.btn {
-    width:7em;
+    width:4em;
     margin-right: 0;
-    height: 3em;
+    height: 2em;
     align-self: flex-end;
     cursor: pointer;
     background-color: #FF4081;
     border-radius: 3px;
     border: 1px solid rgba(255,255,255,.4);
     color: #FFF;
-    margin: 1em 1em;
+    margin: 1em;
     padding: 0;
     box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
     text-shadow: #333333 0 1px 0;
@@ -991,7 +1039,7 @@ ul li{
     font-size: 1.5em;
     font-family: 'Roboto', cursive;
 }
-.fa-star, .fa-map-marker, .fa-user-o, .fa-sign-in, .fa-facebook-square, .fa-twitter-square, .fa-linkedin-square, .fa-google-plus-square, .fa-skype, .fa-youtube-square, .fa-bars {
+.fa-star, .fa-user-o, .fa-sign-in, .fa-facebook-square, .fa-facebook, .fa-twitter, .fa-linkedin, .fa-twitter-square, .fa-linkedin-square, .fa-google-plus-square, .fa-skype, .fa-youtube-square, .fa-bars, .fa-map-marker>span, .phone a:hover{
    color: rgba(255, 255, 255, 0.78);
 }
 .fa-facebook-square:hover, .fa-twitter-square:hover, .fa-linkedin-square:hover, .fa-google-plus-square:hover, .fa-youtube-square:hover{
@@ -1003,7 +1051,7 @@ ul li{
 .phone{
     display:inline-block;
 }
-.profile a, .favorities a, .cabinet a{
+.profile a, .favorities a, .cabinet a, .phone a{
      text-decoration: none;
      color: rgba(255, 255, 255, 0.74);
      
@@ -1454,7 +1502,7 @@ main{
     color: #bdbdbd;
 }
 .price div:nth-of-type(4) a{
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     background-color: #FF4081;
     color: #fff;
@@ -1485,7 +1533,7 @@ main{
 aside{
     flex:2;
     align-self: flex-start;
-    margin:2em;
+    margin:1em 1em 1em 2em;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -1494,11 +1542,9 @@ aside{
 
 .best{
     flex:1;
-    padding-bottom: 0.5em;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
     align-self:stretch;
     letter-spacing: 0.1em;
-    font-size: 1.4em;
     font-weight: 100;
     margin-bottom: 1.3em;
     color:#BDBDBD; 
@@ -1518,7 +1564,7 @@ aside{
     align-self: stretch;
     background-color: #fff;
     display:flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: base-line;
 }
@@ -1575,10 +1621,11 @@ aside{
     font-weight: 500;
      padding-top: 0.5em;
 }
-.connect div:last-of-type
+.connect div:last-of-type a
 {
     color:#212121;
     font-size:0.8em;
+    text-decoration: none;
 }
 
 
@@ -1677,24 +1724,27 @@ footer>div{
     color: #FFF;
 }
 footer .footer_menu{
-    align-self: baseline;flex-grow:1;
-    padding-bottom: 0em;
+    align-self: baseline;
+    flex-grow:1;
+    padding-bottom: 1em;
     color: rgba(255, 255, 255, 0.78);
     display:flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content:space-around;
     align-items:stretch;
     width: 100%;
     
 }
 .footer_menu_sub{
     align-self:baseline;
+
     
 }
 .footer_menu_sub h5{
     color: #FFF;
     text-transform: uppercase;
-    margin:.5em 0 ;
+    margin:1em 0 ;
+    text-align: center;
      letter-spacing: 0.01em
      
     
@@ -1704,6 +1754,7 @@ footer .footer_menu{
     text-decoration: none;
     font-size: 0.6em;
     text-align: right;
+   
 }
 
 .footer_menu_sub ul li a{
@@ -1713,10 +1764,16 @@ footer .footer_menu{
 }
 .footer_menu_sub ul li a:hover{
     color: #fff;
+    
 }
 .footer_menu_sub:last-of-type{
   display: flex;
    flex-flow: row wrap; 
    justify-content:space-around; 
    
+}
+.footer_menu_sub:last-of-type h5{
+   width:100%; 
+   align-self: center;
+   margin-bottom: 1.5em;
 }

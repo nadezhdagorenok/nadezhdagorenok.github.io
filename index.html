@@ -4,22 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <title>Property</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/header-footer.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        
         <script src="https://use.fontawesome.com/744b749621.js"></script>
-        <script src="assets/js/preloader.js"></script>
+        
     </head>
     <body>
         
-       <!-- <div class="preloader" id="preloader-item">
+       <div class="preloader" id="preloader-item">
             <div class="loader"></div>
-        </div>-->
+        </div>
         <div class="container">
             <header class="header">
                         <nav id="top">
-                            <div class="map"><a href="#map"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Properties on the map</span></a></div>
-                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</div>
+                            <div class="map"><a href="#map"><i class="fa fa-map-marker fa-lg" style="color:#FF4081" aria-hidden="true" ></i> <span style="color:rgba(255, 255, 255, 0.78)">Properties on the map</span></a></div>
+                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299369068">+375-29-936-9068</a></div>
                             <div class="favorities"><a href=""><i class="fa fa-star" aria-hidden="true"></i>Favorities</a></div>
                             <div class="profile"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></div>
                             <div class="cabinet"><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i>Log/Sign up</a></div>
@@ -79,15 +77,40 @@
   <div class="modal-wrap" aria-hidden="true" role="dialog">
     <label class="modal-overlay" for="modal-form"></label>
     <div class="modal-dialog">
-      <div class="modal-header">
-        <h2>Add Your Property</h2>
+      
+        
         <label class="btn-close" for="modal-form" aria-hidden="true">×</label>
-      </div>
-      <div class="modal-body">
+      
+        <div class="modal-body">
         <form method=get action='modal.php'>
                             <input type="name" name="name" placeholder="Name*" class="name" required />
                             <input type="email" name="emailaddress" placeholder="Email*" class="mail" required/>
-                            <textarea rows="4"  cols="50" name="subject" rows="4" cols="50" placeholder="Property description*" class="message" required/></textarea>
+                            <textarea rows="1"  cols="50" name="subject" rows="1" cols="50" placeholder="Property title*" class="message-small" required/></textarea>
+                            <textarea rows="4"  cols="50" name="subject" rows="4" cols="50" placeholder="Property description*" class="message-big" required/></textarea>
+                            <select name='location'>
+                            <option value=1 selected>Location (any)</option>
+                            <option value=2>Belarus</option>
+                            <option value=3>Poland</option>
+                            <option value=2>Switzerland</option>
+                            <option value=3>Austria</option>
+                        </select>
+                        <select name='propertyType' multiply>
+                            <option value=1a selected>Property type (any)</option>
+                            <optgroup label=Commercial>
+                            <option value=1b>Office</option>
+                            <option value=1c>Shop</option>
+                            </optgroup>
+                            <optgroup label=Residencial>
+                            <option value=1d>Apartment</option>
+                            <option value=1e>Condo</option>
+                            <option value=1f>Villa</option>
+                            </optgroup>
+                        </select>
+                        <select name='propertyStatus'>
+                            <option value=2a selected>Property status (any)</option>
+                            <option value=2b>For rent</option>
+                            <option value=2c>For sale</option>
+                        </select>
                             <input type="submit" value="ADD" class="btn"> 
                             </form>
       </div>
@@ -98,7 +121,15 @@
                     
               
             </header>
-              <div class="content"><a name="movetotop"></a>
+              <div class="content">
+                  <div id="crumbs">
+                   <!--  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="property.html">Property</a></li>
+                    <li><a href="index_rent">For Rent</a></li>
+                   </ul>
+                </div>-->
+                  <a name="movetotop"></a>
                   <div class="search">
                     
                      <form method=get action='FindProperty.php' class="search-content">
@@ -244,8 +275,8 @@
                                 </div>
                             </div>
                             <div class="item_second">
-                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
-                                   <div><a href="" title="">View detail</a></div>
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 170,000</div>
+                                   <div><a href="index_OldHause.html" title="OldHause">View detail</a></div>
                             </div>
                         </div>
                         
@@ -265,14 +296,14 @@
                                    <div class="info1">Garages</div>
                                 </div>
                                 <div class="item_first_element">
-                                   <div class="info2">2</div>
-                                   <div class="info2">4</div>
                                    <div class="info2">1</div>
+                                   <div class="info2">4</div>
+                                   <div class="info2">0</div>
                                 </div>
                             </div>
                             <div class="item_second">
-                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
-                                   <div><a href="" title="">View detail</a></div>
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 58,999</div>
+                                   <div><a href="index_blockhause.html" title="BlockHause">View detail</a></div>
                             </div>
                         </div>
                         <div class="item">
@@ -280,7 +311,7 @@
                             <a href="" title="" class="img-link">
                             <img src="assets/img/home3.jpg" alt="">
                             <div class="cover-bg"></div>
-                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            <p class="cover-title">It is a nice four-storeyed brick building with a green roof and a high chimney. The house is surrounded with a spacious garden where you can plant fruit, vegetables and flowers.</p>
                             </a>
                             </div>
                             <div class="item_first">
@@ -290,14 +321,14 @@
                                    <div class="info1">Garages</div>
                                 </div>
                                 <div class="item_first_element">
-                                   <div class="info2">2</div>
                                    <div class="info2">4</div>
-                                   <div class="info2">1</div>
+                                   <div class="info2">8</div>
+                                   <div class="info2">2</div>
                                 </div>
                             </div>
                             <div class="item_second">
-                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
-                                   <div><a href="" title="">View detail</a></div>
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 350,000</div>
+                                   <div><a href="index_greenhause.html" title="GreenHause">View detail</a></div>
                             </div>
                         </div>
                       </section>
@@ -307,7 +338,7 @@
                             <a href="" title="" class="img-link">
                             <img src="assets/img/home4.jpg" alt="">
                             <div class="cover-bg"></div>
-                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            <p class="cover-title">This beatiful hause is located in the center of Warsaw in Poland. The ground floor of the house has a hall, a large living-room with a fireplace, a cosy dining-room connected with a kitchen, a bathroom. The first floor has three small bedrooms, a library, a bathroom and a balcony upstairs. The library is equipped with lots of bookshelves, two comfortable armchairs, a desk and an office chair. In the bedrooms there are beds, wardrobes, mirrors.  </p>
                             </a>
                             </div>
                             <div class="item_first">
@@ -319,12 +350,12 @@
                                 <div class="item_first_element">
                                    <div class="info2">2</div>
                                    <div class="info2">4</div>
-                                   <div class="info2">1</div>
+                                   <div class="info2">0</div>
                                 </div>
                             </div>
                             <div class="item_second">
-                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
-                                   <div><a href="" title="">View detail</a></div>
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 70,000</div>
+                                   <div><a href="index_goodplace.html" title="GoodPlace">View detail</a></div>
                             </div>
                         </div>
                         
@@ -334,7 +365,7 @@
                             <a href="" title="" class="img-link">
                             <img src="assets/img/home5.jpg" alt="">
                             <div class="cover-bg"></div>
-                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            <p class="cover-title">This very nice villa is located on the nord of Germany. It is not very small. There are six rooms in this house: a living-room, a dining-room and four bedrooms, and a kitchen.</p>
                             </a>
                             </div>
                             <div class="item_first">
@@ -345,13 +376,13 @@
                                 </div>
                                 <div class="item_first_element">
                                    <div class="info2">2</div>
-                                   <div class="info2">4</div>
+                                   <div class="info2">6</div>
                                    <div class="info2">1</div>
                                 </div>
                             </div>
                             <div class="item_second">
-                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
-                                   <div><a href="" title="">View detail</a></div>
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 240,000</div>
+                                   <div><a href="index_redvilla.html" title="RedVilla">View detail</a></div>
                             </div>
                         </div>
                         <div class="item">
@@ -359,7 +390,7 @@
                             <a href="" title="" class="img-link">
                             <img src="assets/img/home6.jpg" alt="">
                             <div class="cover-bg"></div>
-                            <p class="cover-title">This apartment is located on the west of Belarus. It has three rooms, two baths and own garage. Natural of this hause is very beautiful. It has very big place around. Not far of haus you can see shops, hospital.</p>
+                            <p class="cover-title">This villa is located in Switzerland. It has three bedrooms and a living room. It's bright and cozy, though small. Each room is good in its own way.</p>
                             </a>
                             </div>
                             <div class="item_first">
@@ -369,14 +400,14 @@
                                    <div class="info1">Garages</div>
                                 </div>
                                 <div class="item_first_element">
-                                   <div class="info2">2</div>
+                                   <div class="info2">1</div>
                                    <div class="info2">4</div>
                                    <div class="info2">1</div>
                                 </div>
                             </div>
                             <div class="item_second">
-                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 17,000</div>
-                                   <div><a href="" title="">View detail</a></div>
+                                   <div><i class="fa fa-usd" aria-hidden="true"></i> 139,999</div>
+                                   <div><a href="index_smallvilla" title="SmallVilla">View detail</a></div>
                             </div>
                         </div>
                       </section>
@@ -410,30 +441,30 @@
                    </main>
                     
                     <aside>
-                        <div class="best">Best Agents</div>
+                        <div class="best"><h2>Best Agents</h2></div>
                         <div class="agents">
                             <div class="agent">
                                    <figure class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="60px" height="60px"></figure>
                                     <div class="connect first">
                                       <div>Nadezhda Gorenok</div>
-                                      <div>@ Email Address</div>
-                                      <div><i class="fa fa-phone" aria-hidden="true"></i> 29-996-87-68</div>
+                                      <div>info@besthome.com</div>
+                                      <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299369068">+375-29-936-9068</a></div>
                                     </div>
                             </div>
                             <div class="agent">
                                  <figure class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="60" height="60px"></figure>
                                  <div class="connect second">
                                    <div>Katerina Novik</div>
-                                   <div>@ Email Address</div>
-                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-999-90-58</div>
+                                   <div>info@besthome.com</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299009068">+375-29-900-9068</a></div>
                                  </div>
                             </div>
                             <div class="agent">
                                   <figure class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="60" height="60px"></figure>
                                   <div class="connect third">
                                    <div>Svetlana Krupskaya</div>
-                                   <div>@ Email Address</div>
-                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-915-90-60</div>
+                                   <div>info@besthome.com</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299969060">+375-29-996-9060</a></div>
                                   </div>
                                  </div>
                         </div>
@@ -448,6 +479,7 @@
                 </div>
                           
         <footer>
+            
             <nav class="footer_menu">
                 <div class="footer_menu_sub"><h5>Locations</h5>
                 <ul>
