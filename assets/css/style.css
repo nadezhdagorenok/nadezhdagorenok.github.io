@@ -322,6 +322,7 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
     transform: translateZ(0); transition: all 0.5s ease;
     opacity:0.8;
+   
 }
 .totop i{
     position: absolute;
@@ -331,7 +332,9 @@ body {
     transform: translate(-50%, -50%);
     color:#FF4081;
 }
-
+.totop>a{
+     transition:all 5s linear;
+}
 .totop:hover {box-shadow: 0 0 10px rgba(0,0,0,0.4); opacity:1; }
 .totop:active { transform: scale(1.1,1.1); }
 .totop:focus { outline: 0; border:none; color: rgba(0, 0, 0, 0); }
@@ -1109,10 +1112,11 @@ ul li{
       width:50%;
    }
   
+  
   .search>.search-content>select{
-      flex: 4;
+      
       align-self:center;
-      width:15em;
+      width:13em;
       background-color: #FFF;
       color: #212121;
       padding: 0.4em 0.4em;
@@ -1132,19 +1136,23 @@ ul li{
       }
  
 #extra{
-       flex:7.5;
+       flex:7;
        align-self: flex-end;
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
       align-items: center;
       box-sizing: border-box;
-       width:100%;
+      width:100%;
        
       }
      
        #extra select{
     flex: 25%;
+    align-self: stretch;
+        width: 12.9em;
+        
+   
 }
       #extra>select{
           padding:.4em;
@@ -1152,7 +1160,7 @@ ul li{
           text-transform: uppercase;
       }
       
-.extra-input:checked~ .search-content #extra{
+#extra-button:checked~#extra{
     display:block;
     
 }
@@ -1168,7 +1176,7 @@ ul li{
        padding: 0.4em 0.4em;
        cursor: pointer;
   }*/
-  .search>.search-content button:last-of-type{
+  .search>.search-content button{
       flex:3;
       color: #fff;
      background-color: #2196F3;

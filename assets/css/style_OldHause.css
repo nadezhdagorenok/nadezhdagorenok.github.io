@@ -595,7 +595,7 @@ main {
 }
 
 
-.propertyDetail, .description, .position, .facilities {
+.propertyDetail, .description, .position, .facilities, .plan {
     flex:1;
     padding-bottom: 0.6em;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
@@ -625,7 +625,7 @@ main {
 }
 
 
-.description-item, .facilities+div {
+.description-item, .facilities+div, .plan+figure{
     flex: 1;
     color:#212121;
     box-sizing: border-box;
@@ -642,6 +642,242 @@ main {
     padding: .5em;
     
 }
+
+.plan-big {
+                width:  600px;
+                height:auto;
+                position: relative;
+            }
+            .min-block{
+                position:  absolute;
+                background: transparent;
+                z-index:5;
+                cursor:pointer;
+                border: 5px solid #FF4081;
+                opacity:0;
+                transition: opacity 1s linear;
+            }
+            .small{
+               position:  absolute;
+                width: 80px;
+                z-index:4;
+                cursor:pointer; 
+                top:50px;
+                left: 355px;
+                width: 50px;
+                height:40px;
+            }
+            
+            .kitchen:hover, 
+            .bedroom1:hover,
+            .bedroom2:hover,
+            .livingroom:hover,
+            .storage:hover, 
+            .garage:hover,
+            .lobby:hover,
+            .studio:hover{
+                opacity:1;
+            }
+            
+            .kitchen{
+                top: 40px;
+                left:229px;
+                width: 178px;
+                height:53px;
+            }
+            
+            .bedroom1{
+                 top: 135px;
+                left:304px;
+                width: 111px;
+                height:105px;
+               
+            }
+            .bedroom2{
+                 top: 135px;
+                left:418px;
+                width: 100px;
+                height:105px;
+               
+            }
+             .livingroom {
+                 top: 40px;
+                left:115px;
+                width: 110px;
+                height:203px;
+                }
+                .storage {
+                 top: 133px;
+                left:230px;
+                width: 71px;
+                height:107px;
+               
+                }
+                 .garage {
+                 top: 40px;
+                left:522px;
+                width: 105px;
+                height:200px;
+                
+                }
+                 .lobby {
+                 top: 244px;
+                left:115px;
+                width: 94px;
+                height:96px;
+                }
+                 .studio {
+                 top: 244px;
+                left:215px;
+                width: 98px;
+                height:96px;
+                
+                }
+                
+                
+                
+                /* Cтили слоя затемнения и модального окна  */
+.overlay {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1;
+visibility: hidden;
+/* фон затемнения */
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+position: fixed; /* фиксированное поцизионирование */
+cursor: default; 
+-webkit-transition: opacity .5s;
+-moz-transition: opacity .5s;
+-ms-transition: opacity .5s;
+-o-transition: opacity .5s;
+transition: opacity .5s;
+}
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+
+.modal>img {
+
+top: 300px;
+right: 0;
+bottom: 0;
+left: 0;
+display:block;
+margin: auto;
+min-width: 320px;
+max-width: 800px;
+width: 100%;
+max-height: 80vh;
+}
+.modal>.read{
+    position:absolute;
+    z-index:50;
+    left:-80px;
+    top:0;
+    width: 200px;
+    max-height:80vh;
+    border-radius: 3px;
+    padding:10px;
+    background: #fff;
+    font-size: 1.2em;
+    
+}
+/* Cтили модального окна*/
+.modal {
+top: 0;
+right: 0;
+left: 0;
+font-size: 14px;
+z-index: 30;
+display: block;
+visibility: hidden;
+margin: 0 auto;
+width: 90%;
+min-width: 320px;
+max-width: 800px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+position: fixed;
+padding: 15px;
+border: 1px solid #383838;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+border-radius: 4px;
+background-color: #FFFFFF;
+/* внешняя тень блока */
+-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+/* полная прозрачность окна, появление при клике */
+opacity: 0;
+/* эффект перехода (появление) */
+-webkit-transition: all ease .5s;
+-moz-transition: all ease .5s;
+-ms-transition: all ease .5s;
+-o-transition: all ease .5s;
+transition: all ease .5s;
+}
+/* активируем появление окна и затемнение фона */
+.overlay:target+.modal {
+top: 5%; /* положение окна от верха страницы при появлении */
+visibility: visible;
+opacity: 1; /* убираем прозрачность */
+}
+/* кнопка закрытия */
+.close {
+position: absolute;
+top: -10px;
+right: -10px;padding: 0;
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+-ms-border-radius: 15px;
+-o-border-radius: 15px;
+border-radius: 15px;
+background-color: rgba(61, 61, 61, 0.8);
+-webkit-box-shadow: 0px 0px 10px #000;
+-moz-box-shadow: 0px 0px 10px #000;
+box-shadow: 0px 0px 10px #000;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+line-height: 20px;
+/*эффект перехода при наведении */
+-webkit-transition: all ease .8s;
+-moz-transition: all ease .8s;
+-ms-transition: all ease .8s;
+-o-transition: all ease .8s;
+transition: all ease .8s;
+}
+.close:before {
+color: rgba(255, 255, 255, 0.9);
+content: "X";
+text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+font-size: 12px;
+}
+.close:hover {
+background-color: #FF4081;
+/* крутим кнопку при наведении */
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+      
+
+
+
+
+
 
 .slider {
     flex:5;
