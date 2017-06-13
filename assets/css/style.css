@@ -129,7 +129,7 @@ body {
     list-style:none;
     padding: 0px;
     box-sizing: border-box;
-    width: 300px;
+    width: 90vw;
     margin:0 0;
     top: 7em;
     right: -40em;
@@ -293,16 +293,31 @@ body {
     }
     .agent{
         flex-wrap: wrap!important;
-        
+        padding-left:2em!important;
     }
     .connect{
+       
         align-self: center!important;
         padding-left:1em!important;
-        margin-right:0!important;
+        margin:0!important;
+        text-align:center!important;
     }
     
+    .modal-body>form{
     
    
+    font-size: 1em!important;
+    }
+    .modal-body>form>textarea.message-big{
+    height: 3em !important;
+    
+}
+.modal-body>input{
+    font-size: 1em!important;
+}
+.modal-header>h2{
+    font-size: 1em!important;
+}
    
 }
 @media all and (min-width:1200px){
@@ -552,23 +567,54 @@ transform: rotate(360deg);
     flex: 1;
     align-self: center;
     display: flex;
-    align-items:baseline;
-    justify-content: flex-end;
+    flex-flow:column wrap;
+    align-items:center;
+    justify-content: center;
+  
 }
 #logo>.img{
-    flex:1;
-    padding-left: 5em;
-    padding-right: 0;
-    margin:0;
-    align-self: flex-end;
+    
+    align-self: center;
+   margin:0;
 }
-#logo>.logoname{
-    flex:5;
+.logoname{
+    color:#fff;
     margin:0; padding:0;
-    font-size: 1.2em;
-   align-self: flex-end;
+    font-size: 1.6em!important;
+    font-weight: 500!important;
+   text-align: center;
+}
+.backfaces {
+    align-self: center;
+    width: 9em;
+    position: relative;
+    margin:0; padding:0;
+}
+.front, .back {
+    position: absolute;
+    top: -0.8vw;
+    left: 0vw;
+    backface-visibility: hidden;
+    transition: 2s;
+transform-style: preserve-3d;
+    cursor:pointer;
+    width:100%;
+    
 }
 
+.backfaces .back{
+    transform:rotateY(180deg);
+}
+
+#flip:checked+.backfaces .front{
+    transform:rotateY(180deg);
+}
+#flip:checked+.backfaces .back{
+    transform:rotateY(360deg);
+}
+#flip{
+    display:none;
+}
 
 .submit {
      
@@ -608,8 +654,8 @@ transform: rotate(360deg);
     font-size: 30px;
     text-decoration: none;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -10px;
+    top: -10px;
    width: 20px;
    height: 20px;
 border: 2px solid #ccc;
@@ -674,7 +720,7 @@ transform: rotate(360deg);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 20%;
+    top: 5vh;
 }
 /* элементы модального окна */
 .modal-dialog {
@@ -682,7 +728,6 @@ transform: rotate(360deg);
     border: none;
     border-radius: 5px;
     position: fixed;
-    width: 80%;
     max-width: 600px;
     left: 50%;
     top: -100%;
@@ -698,10 +743,18 @@ transform: rotate(360deg);
     -o-transition: -o-transform 0.4s ease-out;
     transition: transform 0.4s ease-out;
     z-index: 103;
+    
 }
+.modal-header>h2{
+    text-align: center;
+    color:#212121;
+    
+}
+
 .modal-body {
   padding: 20px;
-  background-color: #bdbdbd;
+  background-color: #ccc;
+  
 }
 .modal-body p {
     margin: 0;
@@ -718,7 +771,7 @@ transform: rotate(360deg);
 .modal-body>form{
     
     width:100%;
-    color:#bdbdbd;
+    color:#ccc;
     font-size: 1.2em;
     text-transform: uppercase;
     display: flex;
@@ -741,7 +794,7 @@ transform: rotate(360deg);
     border-radius: 4px;
     background-clip: padding-box; 
     display:block;
-    font-size:1em;
+    font-size:1.2em;
     font-family: 'Roboto';
     color:#757575;
     margin-bottom:.5em;
@@ -1107,21 +1160,24 @@ ul li{
       align-self: center;
       display: flex;
       flex-flow: row wrap;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      width:50%;
+      width:45em;
+      
+      box-sizing: border-box;
    }
   
   
-  .search>.search-content>select{
+  .search>.search-content select, .extra select{
       
       align-self:center;
-      width:13em;
+      width:15em;
       background-color: #FFF;
       color: #212121;
       padding: 0.4em 0.4em;
       text-transform: uppercase;
       cursor:pointer;
+      box-sizing: border-box;
       }
       
       #extra-button{
@@ -1133,31 +1189,36 @@ ul li{
            padding: 0.3em 0.3em;
            text-align: center;
            color: #fff;
+           width:2em;
+           box-sizing: border-box;
       }
+       
+      .search-content>button[value="search"]{
+          width:8em!important;
+        }
  
 #extra{
-       flex:7;
+      
        align-self: flex-end;
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
       align-items: center;
       box-sizing: border-box;
-      width:100%;
-       
+      width:44em;
+      margin:0;
+      padding:0; 
       }
      
-       #extra select{
-    flex: 25%;
-    align-self: stretch;
-        width: 12.9em;
-        
+      
    
-}
+
       #extra>select{
           padding:.4em;
           cursor:pointer;
           text-transform: uppercase;
+          box-sizing: border-box;
+          margin:0;
       }
       
 #extra-button:checked~#extra{
@@ -1564,7 +1625,7 @@ aside{
     display:flex;
     flex-flow: column wrap;
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items:center;
 }
 .agent{
     flex:1;

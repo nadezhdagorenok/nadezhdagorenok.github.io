@@ -35,7 +35,11 @@
                   <div class="logoMenu">
                     <div id="logo">
                     <figure class="img"><a href="" target="" ><img src="assets/img/house.svg" title="Property" alt="Property" width="50" height="50"></a></figure>
-                    <span class="logoname"><a href="" target="" >BestHome</a></span>
+                    <input type="checkbox" id="flip">
+                    <label class="backfaces" for="flip">
+                    <div class="front logoname">BestHome</div>
+                    <div class="back logoname">BestenHause</div>
+                    </label>
                     </div>
                         <div class="map-small"><a href="#map"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a></div>
                         <input type="checkbox" id="sh" class="search-ticker">
@@ -80,7 +84,7 @@
       
         
         <label class="btn-close" for="modal-form" aria-hidden="true">×</label>
-      
+        <div class="modal-header"><h2>Add your property</h2></div>
         <div class="modal-body">
         <form method=get action='modal.php'>
                             <input type="name" name="name" placeholder="Name*" class="name" required />
@@ -157,7 +161,7 @@
                             <option value=2b>For rent</option>
                             <option value=2c>For sale</option>
                         </select>
-                        <input type="checkbox" id="extra-button" class="extra-input"><label for="extra-button"><i class="fa fa-plus-circle" aria-hidden="true"></i></label>
+                        <input type="checkbox" id="extra-button" class="extra-input"><label for="extra-button"><i class="fa fa-plus-circle" aria-hidden="true"></i><i class="fa fa-minus-circle back" aria-hidden="true"></i></label>
                        <button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button>
                         <!--Дополнительная кнопка расширенного поиска-->
                         <div id="extra">

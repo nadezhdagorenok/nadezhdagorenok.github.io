@@ -670,11 +670,16 @@ main {
                 width: 6vw;
                 height:4.5vw;
                 display:none;
+                transition: all 3s 5s linear;
+            }
+            .k{
+               transition: display 3s 5s linear; 
             }
             .kitchen:hover~.k{
              top:4vw;
             left: 37vw;  
             display:block;
+            
             }
              .livingroom:hover~.l{
              top:16vw;
