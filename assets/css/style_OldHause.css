@@ -669,40 +669,49 @@ main {
                 cursor:pointer; 
                 width: 6vw;
                 height:4.5vw;
+                display:none;
             }
-            .k{
+            .kitchen:hover~.k{
              top:4vw;
-            left: 37vw;   
+            left: 37vw;  
+            display:block;
             }
-            .l{
+             .livingroom:hover~.l{
              top:16vw;
-            left: 11.5vw;   
+            left: 11.5vw;  
+            display:block;
             }
-             .b1{
+             .bedroom1:hover~.b1{
              top:18vw;
-            left: 34.5vw;   
+            left: 34.5vw; 
+            display:block;
             }
-             .b2{
+              .bedroom2:hover~.b2{
              top:17.8vw;
-            left: 47.5vw;   
+            left: 47.5vw;
+            display:block;
             }
-            .g{
+             .garage:hover~.g{
              top:13.5vw;
-            left: 62.5vw;   
+            left: 62.5vw;  
+            display:block;
             }
-             .stor{
+              .storage:hover~.stor{
              top:22.5vw;
             left: 23.3vw;   
+            display:block;
             }
-             .stud{
+              .studio:hover~.stud{
              top:31vw;
-            left: 25.9vw;   
+            left: 25.9vw;  
+            display:block;
             }
-            .lob{
+             .lobby:hover~.lob{
              top:34vw;
             left: 8.5vw;   
             width: 4.5vw;
             height: 3.5;
+            display:block;
             }
             
             .kitchen:hover, 
