@@ -286,7 +286,7 @@ header {
     justify-content: space-between;
     background-color: #2196F3;
    position: fixed;
-    z-index: 2;
+    z-index: 10;
     width:100%;
     top: 0;
 }
@@ -643,10 +643,15 @@ main {
     
 }
 
+.item-plan{
+    position:relative;
+    width: 72vw;
+   
+   
+}
+
 .plan-big {
-                width:  600px;
-                height:auto;
-                position: relative;
+        margin:0;
             }
             .min-block{
                 position:  absolute;
@@ -654,18 +659,50 @@ main {
                 z-index:5;
                 cursor:pointer;
                 border: 5px solid #FF4081;
+                box-sizing: border-box;
                 opacity:0;
                 transition: opacity 1s linear;
             }
             .small{
                position:  absolute;
-                width: 80px;
                 z-index:4;
                 cursor:pointer; 
-                top:50px;
-                left: 355px;
-                width: 50px;
-                height:40px;
+                width: 6vw;
+                height:4.5vw;
+            }
+            .k{
+             top:4vw;
+            left: 37vw;   
+            }
+            .l{
+             top:16vw;
+            left: 11.5vw;   
+            }
+             .b1{
+             top:18vw;
+            left: 34.5vw;   
+            }
+             .b2{
+             top:17.8vw;
+            left: 47.5vw;   
+            }
+            .g{
+             top:13.5vw;
+            left: 62.5vw;   
+            }
+             .stor{
+             top:22.5vw;
+            left: 23.3vw;   
+            }
+             .stud{
+             top:31vw;
+            left: 25.9vw;   
+            }
+            .lob{
+             top:34vw;
+            left: 8.5vw;   
+            width: 4.5vw;
+            height: 3.5;
             }
             
             .kitchen:hover, 
@@ -680,60 +717,57 @@ main {
             }
             
             .kitchen{
-                top: 40px;
-                left:229px;
-                width: 178px;
-                height:53px;
+                top: 3vw;
+                left:22vw;
+                width: 22vw;
+                height:7vw;
             }
             
             .bedroom1{
-                 top: 135px;
-                left:304px;
-                width: 111px;
-                height:105px;
+                top: 14vw;
+                left:30.8vw;
+                width: 13.8vw;
+                height:13.6vw;
                
             }
             .bedroom2{
-                 top: 135px;
-                left:418px;
-                width: 100px;
-                height:105px;
+                top: 14vw;
+                left:44.5vw;
+                width: 12.7vw;
+                height:13.5vw;
                
             }
              .livingroom {
-                 top: 40px;
-                left:115px;
-                width: 110px;
-                height:203px;
+                top: 3vw;
+                left:8.1vw;
+                width: 13.9vw;
+                height:24.6vw;
                 }
                 .storage {
-                 top: 133px;
-                left:230px;
-                width: 71px;
-                height:107px;
-               
+                top: 14.3vw;
+                left:21.8vw;
+                width: 9.2vw;
+                height:13.2vw;
                 }
                  .garage {
-                 top: 40px;
-                left:522px;
-                width: 105px;
-                height:200px;
-                
+                top: 3vw;
+                left:57vw;
+                width: 13vw;
+                height:24.5vw;
                 }
                  .lobby {
-                 top: 244px;
-                left:115px;
-                width: 94px;
-                height:96px;
+                top: 27.4vw;
+                left:8vw;
+                width: 12.1vw;
+                height:12vw;
                 }
                  .studio {
-                 top: 244px;
-                left:215px;
-                width: 98px;
-                height:96px;
+                top: 27.4vw;
+                left:20vw;
+                width: 12.3vw;
+                height:12.1vw;
                 
                 }
-                
                 
                 
                 /* Cтили слоя затемнения и модального окна  */
@@ -762,29 +796,30 @@ opacity: 1;
 
 .modal>img {
 
-top: 300px;
+top: 10vw;
 right: 0;
 bottom: 0;
 left: 0;
 display:block;
 margin: auto;
 min-width: 320px;
-max-width: 800px;
+max-width: 100%;
 width: 100%;
 max-height: 80vh;
 }
 .modal>.read{
     position:absolute;
     z-index:50;
-    left:-80px;
+    left:-3vw;
     top:0;
-    width: 200px;
+    width: 25vw;
     max-height:80vh;
     border-radius: 3px;
     padding:10px;
     background: #fff;
     font-size: 1.2em;
-    
+    text-align: left;
+   
 }
 /* Cтили модального окна*/
 .modal {
@@ -798,7 +833,7 @@ visibility: hidden;
 margin: 0 auto;
 width: 90%;
 min-width: 320px;
-max-width: 800px;
+max-width: 70vw;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
 position: fixed;
 padding: 15px;
