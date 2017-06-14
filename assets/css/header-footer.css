@@ -129,10 +129,10 @@ body {
     list-style:none;
     padding: 0px;
     box-sizing: border-box;
-    width: 300px;
+    width: 70vw;
     margin:0 0;
-    top: 7em;
-    right: -40em;
+    top: 6.7em;
+    right: -35em;
     transition: right .2s;
     z-index: 5;
    
@@ -194,6 +194,7 @@ body {
 .map-ticker{
    display:none; 
 }
+
 .submit{
     right:.5em!important;
 }
@@ -224,6 +225,11 @@ body {
     .item{
         min-width: 100%!important;
     }
+    
+    #crumbs{
+    
+    margin-top:0.5em !important;
+}
     footer{
         display:none!important;
     }
@@ -232,11 +238,12 @@ body {
 }
 .content-aside{
        flex-flow: column;
+      
        
    }
    aside{
         min-width: 100%!important;
-        
+         margin:0!important;
         
     }
     .agents{
@@ -250,6 +257,9 @@ body {
 }
 
 @media all and (max-width:1017px){
+     header{
+         max-height: 12em;
+     }
      #menu ul li{
         flex:1 1 25%;
     }
@@ -270,7 +280,7 @@ body {
    }
     .cabinet{
         display:none;
-    } 
+    }
    
 .price{
     min-width:100%!important;
@@ -290,19 +300,41 @@ body {
         min-width: 30%!important;
         
          margin-right:0!important;
+        margin-top:1em!important;
     }
     .agent{
         flex-wrap: wrap!important;
-        
+        padding-left:2em!important;
     }
     .connect{
+       
         align-self: center!important;
         padding-left:1em!important;
-        margin-right:0!important;
+        margin:0!important;
+        text-align:center!important;
     }
     
+    .modal-body>form{
     
    
+    font-size: 1em!important;
+    }
+    .modal-body>form>textarea.message-big{
+    height: 3em !important;
+    
+}
+.modal-body>input{
+    font-size: 1em!important;
+}
+.modal-header>h2{
+    font-size: 1em!important;
+}
+
+.content-aside #crumbs{
+    
+    margin-top:1.5em;
+}
+
    
 }
 @media all and (min-width:1200px){
@@ -322,6 +354,7 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
     transform: translateZ(0); transition: all 0.5s ease;
     opacity:0.8;
+   
 }
 .totop i{
     position: absolute;
@@ -331,7 +364,9 @@ body {
     transform: translate(-50%, -50%);
     color:#FF4081;
 }
-
+.totop>a{
+     transition:all 5s linear;
+}
 .totop:hover {box-shadow: 0 0 10px rgba(0,0,0,0.4); opacity:1; }
 .totop:active { transform: scale(1.1,1.1); }
 .totop:focus { outline: 0; border:none; color: rgba(0, 0, 0, 0); }
@@ -383,7 +418,46 @@ body {
     }
 }
 
-
+#crumbs{
+    width: 100%;
+    margin:0;padding:0;
+    align-self: baseline;
+    margin: 0;     
+    
+}
+#crumbs ul li{
+        list-style:none;
+        
+}
+#crumbs ul{
+    display:flex;
+    margin:0em;
+    padding:0;
+}
+#crumbs ul li{
+    font-size: 1.2;
+    color: #757575;
+}
+#crumbs ul li a{
+    text-decoration: none;
+    font-size: 1.2;
+    color: #757575;
+}
+#crumbs ul li a:after {
+    content: " / ";  
+    color: #1976D2;
+    }
+#crumbs ul li a:before {
+    content: "";  
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #fff;
+    position: absolute; left: 0; top: 0;    
+}
+#crumbs ul li a:hover{
+    text-decoration: underline;
+    color: #1976D2;
+}
 
 
 .container{
@@ -404,7 +478,7 @@ header {
     justify-content: space-between;
     background-color: #2196F3;
    position: fixed;
-    z-index: 10;
+    z-index: 2;
     width:100%;
     top: 0;
 }
@@ -445,6 +519,7 @@ display:block;
 margin: auto;
 min-width: 320px;
 max-width: 800px;
+max-height: 80vh;
 width: 100%;
 }
 
@@ -458,8 +533,8 @@ z-index: 10;
 display: block;
 visibility: hidden;
 margin: 0 auto;
-width: 90%;
-min-width: 320px;
+width: 80%;
+min-width: 250px;
 max-width: 800px;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
 position: fixed;
@@ -487,7 +562,7 @@ transition: all ease .5s;
 }
 /* активируем появление окна и затемнение фона */
 .overlay:target+.modal {
-top: 20%; /* положение окна от верха страницы при появлении */
+top: 10vh; /* положение окна от верха страницы при появлении */
 visibility: visible;
 opacity: 1; /* убираем прозрачность */
 }
@@ -549,23 +624,118 @@ transform: rotate(360deg);
     flex: 1;
     align-self: center;
     display: flex;
-    align-items:baseline;
-    justify-content: flex-end;
+    flex-flow:column wrap;
+    align-items:center;
+    justify-content: center;
+  
 }
 #logo>.img{
-    flex:1;
-    padding-left: 5em;
-    padding-right: 0;
-    margin:0;
-    align-self: flex-end;
+    
+    align-self: center;
+   margin:0;
 }
-#logo>.logoname{
-    flex:5;
+.logoname{
+    color:#fff;
     margin:0; padding:0;
-    font-size: 1.2em;
-   align-self: flex-end;
+    font-size: 1.6em!important;
+    font-weight: 500!important;
+    font-family: 'Roboto', cursive;
+   text-align: center;
 }
 
+.flip{
+perspective: 1000;
+align-self: center;
+    width: 9em;
+    position: relative;
+    top: 0vw;
+    margin:0; padding:0;
+}
+
+.flip:hover .backfaces{
+
+transform: rotateY(180deg);
+
+}
+
+.flip, .front, .back {
+
+ width: 9em;
+
+
+}
+
+/* здесь находится скорость перевертывания */
+.backfaces {
+
+transition:5s;
+transition-delay: .5s;
+
+transform-style: preserve-3d;
+ 
+
+}
+
+/* скройте обратную сторону во время переворота */
+
+.front, .back {
+
+backface-visibility: hidden;
+position: absolute;
+    top: -0.5em;
+    left: 0vw;
+    width:100%;
+    transform-style: preserve-3d;
+    cursor:pointer;
+}
+
+ 
+/* лицевая сторона размещена над обратной */
+
+.front {
+
+z-index: 2;
+
+}
+
+/* обратная, изначально скрытая сторона */
+
+.back {
+transform: rotateY(180deg);
+}
+/*.backfaces {
+    align-self: center;
+    width: 9em;
+    
+    position: relative;
+    margin:0; padding:0;
+}
+.front, .back {
+    position: absolute;
+    top: -1vw;
+    left: 0vw;
+    backface-visibility: hidden;
+    transition: 2s;
+transform-style: preserve-3d;
+    cursor:pointer;
+    width:100%;
+    
+}
+
+.backfaces .back{
+    transform:rotateY(180deg);
+}
+
+#flip:checked+.backfaces .front{
+    transform:rotateY(180deg);
+}
+#flip:checked+.backfaces .back{
+    transform:rotateY(360deg);
+}
+#flip{
+    display:none;
+}
+*/
 
 .submit {
      
@@ -605,8 +775,8 @@ transform: rotate(360deg);
     font-size: 30px;
     text-decoration: none;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -10px;
+    top: -10px;
    width: 20px;
    height: 20px;
 border: 2px solid #ccc;
@@ -671,7 +841,7 @@ transform: rotate(360deg);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 20%;
+    top: 5vh;
 }
 /* элементы модального окна */
 .modal-dialog {
@@ -679,7 +849,6 @@ transform: rotate(360deg);
     border: none;
     border-radius: 5px;
     position: fixed;
-    width: 80%;
     max-width: 600px;
     left: 50%;
     top: -100%;
@@ -695,10 +864,18 @@ transform: rotate(360deg);
     -o-transition: -o-transform 0.4s ease-out;
     transition: transform 0.4s ease-out;
     z-index: 103;
+    
 }
+.modal-header>h2{
+    text-align: center;
+    color:#212121;
+    
+}
+
 .modal-body {
   padding: 20px;
-  background-color: #bdbdbd;
+  background-color: #ccc;
+  
 }
 .modal-body p {
     margin: 0;
@@ -715,7 +892,7 @@ transform: rotate(360deg);
 .modal-body>form{
     
     width:100%;
-    color:#bdbdbd;
+    color:#ccc;
     font-size: 1.2em;
     text-transform: uppercase;
     display: flex;
@@ -738,7 +915,7 @@ transform: rotate(360deg);
     border-radius: 4px;
     background-clip: padding-box; 
     display:block;
-    font-size:1em;
+    font-size:1.2em;
     font-family: 'Roboto';
     color:#757575;
     margin-bottom:.5em;
@@ -809,7 +986,7 @@ input:focus, textarea:focus {
     overflow: hidden; 
 }
 input.btn {
-    width:4em;
+    width:5em;
     margin-right: 0;
     height: 2em;
     align-self: flex-end;
@@ -1039,10 +1216,10 @@ ul li{
     font-size: 1.5em;
     font-family: 'Roboto', cursive;
 }
-.fa-star, .fa-user-o, .fa-sign-in, .fa-facebook-square, .fa-twitter-square, .fa-linkedin-square,.fa-facebook, .fa-twitter, .fa-linkedin, .fa-google-plus-square, .fa-skype, .fa-youtube-square, .fa-bars, .fa-map-marker>span, .phone a:hover{
+.fa-star, .fa-user-o, .fa-sign-in, .fa-facebook-square, .fa-facebook, .fa-twitter, .fa-linkedin, .fa-twitter-square, .fa-linkedin-square, .fa-google-plus-square, .fa-skype, .fa-youtube-square, .fa-bars, .fa-map-marker>span, .phone a:hover{
    color: rgba(255, 255, 255, 0.78);
 }
-.fa-facebook-square:hover, .fa-twitter-square:hover, .fa-linkedin-square:hover, .fa-google-plus-square:hover, .fa-youtube-square:hover{
+.fa-facebook-square:hover, .fa-twitter-square:hover,  .phone a:hover, .map a:hover,.profile a:hover, .favorities a:hover, .cabinet a:hover,.fa-phone:hover, .fa-facebook:hover, .fa-twitter:hover, .fa-linkedin:hover,.fa-linkedin-square:hover, .fa-google-plus-square:hover, .fa-youtube-square:hover{
     color:#fff;
 }
 .phone .fa-phone{
@@ -1063,6 +1240,10 @@ ul li{
    text-decoration: none;
    color: #FFF;
 }
+#crumbs{
+     
+     font-size: .8em
+ }
 
 
 
@@ -1139,13 +1320,4 @@ footer .footer_menu{
    width:100%; 
    align-self: center;
    margin-bottom: 1.5em;
-}
-
-.fa-facebook:hover,
-.fa-twitter:hover,
-.fa-linkedin:hover,
-.fa-google-plus:hover,
-.fa-skype:hover,
-.fa-youtube:hover {
-    color: #fff
 }

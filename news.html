@@ -8,11 +8,15 @@
         <script src="https://use.fontawesome.com/744b749621.js"></script>
     </head>
     <body>
+        
+       <div class="preloader" id="preloader-item">
+            <div class="loader"></div>
+        </div>
         <div class="container">
             <header class="header">
                         <nav id="top">
-                            <div class="map"><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i> Properties on the map</a></div>
-                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</div>
+                            <div class="map"><a href="#map"><i class="fa fa-map-marker fa-lg" style="color:#FF4081" aria-hidden="true" ></i> <span style="color:rgba(255, 255, 255, 0.78)">Properties on the map</span></a></div>
+                            <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299369068">+375-29-936-9068</a></div>
                             <div class="favorities"><a href=""><i class="fa fa-star" aria-hidden="true"></i>Favorities</a></div>
                             <div class="profile"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></div>
                             <div class="cabinet"><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i>Log/Sign up</a></div>
@@ -20,15 +24,29 @@
                             <a href="https://twitter.com/" title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="https://www.linkedin.com/" title="linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </nav>
+                        <a href="#x" class="overlay" id="map"></a>
+                        <div class="modal">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16441918.400427805!2d20.58969477682223!3d53.25691012440904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfc43674fc2f%3A0x62bf393309c8a213!2svulica+Lienina%2C+Minsk!5e0!3m2!1sen!2sby!4v1497108464504" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <a class="close" title="Close" href="#close"></a>
+                        </div>
+                         
                     
                   <div class="logoMenu">
                     <div id="logo">
                     <figure class="img"><a href="" target="" ><img src="assets/img/house.svg" title="Property" alt="Property" width="50" height="50"></a></figure>
-                    <span class="logoname"><a href="" target="" >BestHome</a></span>
+                   <!--<input type="checkbox" id="flip">
+                    <label class="backfaces" for="flip">-->
+                    <div class="flip">
+                    <div class="backfaces">
+                    <div class="front logoname">BestHome</div>
+                    <div class="back logoname">BestenHause</div>
                     </div>
+                    </div>
+                    </div>
+                        <div class="map-small"><a href="#map"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a></div>
                         <input type="checkbox" id="sh" class="search-ticker">
                         <label class="search-ticker-line" for="sh">
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                         </label>
                         <form method=get action='FindProperty.php' class="search-top">
                             <input type="text" name="q" class="search-input" placeholder="Type to search"><button type='submit' value='SEARCH'><i class="fa fa-search" aria-hidden="true"> SEARCH</i></button> 
@@ -57,16 +75,72 @@
                        </ul>
                     
                     </nav> 
-                     <div class="submit"><a href="submit.html" title="Add new property" ><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x" aria-hidden="true"></i></span></a></div>
+                     <div class="submit"><label class="butn" for="modal-form" title="Add New Property"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></label></div>
                     </div>
+                    
+                        <div class="modal-1">
+  <input class="modal-open" id="modal-form" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-form"></label>
+    <div class="modal-dialog">
+      
+        
+        <label class="btn-close" for="modal-form" aria-hidden="true">×</label>
+        <div class="modal-header"><h2>Add your property</h2></div>
+        <div class="modal-body">
+        <form method=get action='modal.php'>
+                            <input type="name" name="name" placeholder="Name*" class="name" required />
+                            <input type="email" name="emailaddress" placeholder="Email*" class="mail" required/>
+                            <textarea rows="1"  cols="50" name="subject" rows="1" cols="50" placeholder="Property title*" class="message-small" required/></textarea>
+                            <textarea rows="4"  cols="50" name="subject" rows="4" cols="50" placeholder="Property description*" class="message-big" required/></textarea>
+                            <select name='location'>
+                            <option value=1 selected>Location (any)</option>
+                            <option value=2>Belarus</option>
+                            <option value=3>Poland</option>
+                            <option value=2>Switzerland</option>
+                            <option value=3>Austria</option>
+                        </select>
+                        <select name='propertyType' multiply>
+                            <option value=1a selected>Property type (any)</option>
+                            <optgroup label=Commercial>
+                            <option value=1b>Office</option>
+                            <option value=1c>Shop</option>
+                            </optgroup>
+                            <optgroup label=Residencial>
+                            <option value=1d>Apartment</option>
+                            <option value=1e>Condo</option>
+                            <option value=1f>Villa</option>
+                            </optgroup>
+                        </select>
+                        <select name='propertyStatus'>
+                            <option value=2a selected>Property status (any)</option>
+                            <option value=2b>For rent</option>
+                            <option value=2c>For sale</option>
+                        </select>
+                            <input type="submit" value="ADD" class="btn"> 
+                            </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+                    
               
             </header>
                <div class="content">
+                   
+                  <a name="movetotop"></a>
                 <div class="content-aside">
                     
                     <main>
+                        <div id="crumbs">
+                   <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>News</li>
+                   </ul>
+                   </div>
                         
-                      <div class="about">Real estate news</div>
+                      <div class="about"><h2>Real estate news</h2></div>
                       
                        <div class="item">
                             <h3>Top 10 Most Luxurious Houses Of The World</h3>
@@ -74,69 +148,12 @@
                                 This is the list of top ten most luxurious houses from around the world. See how mind-blowing are these most expensive homes which owned by world's richest business tycoons and celebrities.
 
 <p style="text-decoration:underline">10. Dracula's Castle -Romania</p>
-<img src="assets/img/news/news1_1.jpg" alt="Castle">
+<img src="assets/img/news/news1_1.jpg" alt="Castle" >
 <p>Luxurious Houses Romania.
 Worth: $135 million. It situated near Bran in Romania, Dracula's Castle is considered one of the most luxurious castles around the world. It is commonly known as the home of the character Dracula and it became a museum in the 1980s. It is a beautiful house that has 57 rooms and around 17 bedrooms with antique furniture.</p>
 
-<!--9. Updown Court – England
 
-
- 
-Luxurious Houses UK
-Worth: $139 million.
-This house is a Californian style residence situated in the village of Windlesham in Surrey, England. It is built on the 58 acres land, and has a total 103 rooms with all the luxurious facilities. It has everything from swimming pool to bowling alleys. It was, in 2005, the most expensive private home on the market anywhere in the world.
-
-8. The Manor – Los Angeles, California
-
-Luxurious Houses USA
-Worth: $150 million.
-The Manor, also known as Spelling Manor, is a chateau style mansion and is the biggest house in the city Los Angeles, California. It is a privately owned mansion and was constructed in the year 1991 keeping in mind the French Chateau Style. It is spread on the 4.6 hectares land and has 123 rooms.
-
-7. Franchuk Villa – London, UK
-
-Luxurious Houses London
-Worth: $161 million.
-It is situated in Belgravia in the Central London. It is also amongst the most expensive house in the market now. It is constructed in the Victoria style and has 6 floors. There are many luxurious amenities in the house like swimming pool, gym, private theaters and much more.
-
-6. Victorian Villa – Ukraine
-
-Luxurious Houses Ukrine
-Worth: $161 million.
-One of the Ukrainian’s most luxurious home – Victorian Villa. It is the home of Elena Franchuk, the Ukrainian businesswoman and philanthropist. It is a five-story house. It’s featuring a swimming pool, room theater, a panic room and a sauna plus gym. This is sixith in our list of world’s most expensive house. It has been bought in London with a record $161 million price tag.
-
-5. Hearst Mansion – San Simeon, California, USA
-
-Luxurious Houses
-Worth: $165 million.
-This house that is impressive in all aspects located on the Central Coast of California, United States. It was constructed by the US Newspaper icon William Randolph. Leonard Ross who was a lawyer in 1976 then bought it. This house is spread on the 6 hectares of land in the Beverly Hills. This beautiful house has 29 bedrooms, and was used in the filming of the popular movie “Godfather”.
-
-
- 
-4. Fairfield Pond – New York, USA
-
-NYC Luxurious Houses
-Worth: $170 million.
-The home of an American investor and businessman Ira Rennert, dubbed Fairfield. Rennert named his home after the adjoining body of water, Fairfield Pond. The house is situated in the Hamptons in the NY, Us and is spread on the 63 acres of land and it is largest residential house in the US. The house is famous for its separate bowling alley and a hot tub of worth $150,000.
-
-3. The Penthouse in London
-
-Luxurious Houses in London
-Worth: $200 million.
-Whenever you talk London, you talk about high prices. It is the apartment that is 6000 pounds per square feet and it has shocked many real estate agents in London. The apartment is situated in Hyde Park and it is definitely the most expensive apartment in the world.
-
-2. Villa Leopolda – French Riviera
-
-Luxurious Houses France
-Worth: $506 million.
-This 27 storey high residence Villa Lepolda is believed Europe’s most expensive home. This luxurious house take its name from King Leopold, who built it back in 1902 for his mistress Blanche Zélia Joséphine Delacroix. It is a 80,000 square feet estate that is situated on the French Riveria is divided on two guest houses on the 20 acres ground. The best part about this villa that it has a private beach front and it is the best beach front in the southern part of France. It consists of 14 bathrooms and 11 bedrooms and huge gardens and much more.
-
-1. Antilla – Mumbai India
-
-India Luxurious Houses
-Worth: $1 billion.
-This house in Mumbai has broken the world record of being the most expensive home in the world. It is a 27-storey mansion and is considered as the modern Taj Mahal. The net worth of the house is $1 billion. It belongs to the fifth richest man of the world named as Mukesh Ambani. It is a 40,000 square feet house and has every luxury in it.
-                         </p>     -->  
-                         <p style="text-align:right"><a href="">More information</a></p>
+                         <p style="text-align:right"><a href="http://www.wonderslist.com/top-10-luxurious-houses-world/" target="_blank">More information</a></p>
                         </div>
                         
                        <div class="item">
@@ -147,47 +164,54 @@ This house in Mumbai has broken the world record of being the most expensive hom
 
 
 <p style="text-decoration:underline">See also: 10 Home Decor Ideas From USA Top Interior Designers</p>
-<img src="assets/img/news/news2_1.jpg" alt="home">
+<img src="assets/img/news/news2_1.jpg" alt="home" >
 <p>For instance, building a house somewhere on a cliff, high above the ocean, or down on a rocky beach, gives its residents an opportunity to enjoy in breathtaking views or relaxing sounds that ocean waves make while crashing into the rocks below the house.</p>
-   <p style="text-align:right"><a href="">More information</a></p>
+   <p style="text-align:right"><a href="http://homedecorideas.eu/home-design/best-architectural-designs-2017/" target="_blank">More information</a></p>
                         </div>
                      
                      </main>
             
                     
-                    <aside>
-                        <div class="best">Our Agents</div>
+                     <aside>
+                        <div class="best"><h2>Best Agents</h2></div>
                         <div class="agents">
                             <div class="agent">
-                                   <div class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="50px" height="50px"></div>
+                                   <figure class="photo"><img src="assets/img/avatar_03.jpg" title="Nadezhda" alt="Gorenok" width="70px" height="70px"></figure>
                                     <div class="connect first">
                                       <div>Nadezhda Gorenok</div>
-                                      <div>@ Email Address</div>
-                                      <div><i class="fa fa-phone" aria-hidden="true"></i> 29-996-87-68</div>
+                                      <div>info@besthome.com</div>
+                                      <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299369068">+375-29-936-9068</a></div>
                                     </div>
                             </div>
                             <div class="agent">
-                                 <div class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="50" height="50px"></div>
+                                 <figure class="photo"><img src="assets/img/avatar3_03.jpg" title="Katerina" alt="Novik" width="70" height="70px"></figure>
                                  <div class="connect second">
                                    <div>Katerina Novik</div>
-                                   <div>@ Email Address</div>
-                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-999-90-58</div>
+                                   <div>info@besthome.com</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299009068">+375-29-900-9068</a></div>
                                  </div>
                             </div>
                             <div class="agent">
-                                  <div class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="50" height="50px"></div>
+                                  <figure class="photo"><img src="assets/img/avatar4_03.jpg" title="Svetlana" alt="Krupskaya" width="70" height="70px"></figure>
                                   <div class="connect third">
                                    <div>Svetlana Krupskaya</div>
-                                   <div>@ Email Address</div>
-                                   <div><i class="fa fa-phone" aria-hidden="true"></i> 29-915-90-60</div>
+                                   <div>info@besthome.com</div>
+                                   <div><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+375299969060">+375-29-996-9060</a></div>
                                   </div>
                                  </div>
                         </div>
-                        
+                        <div class="email">
+                            <form method=get action='emailSabscribe.php'>
+                            <input type="email" name="emailaddress" placeholder="Email addres here" class="email" required />
+                            <input type="submit" value="SUBSCRIBE"> 
+                            </form>
+                        </div>
                     </aside> 
+                    <div class="totop"><a href="#movetotop"><i class="fa fa-chevron-circle-up fa-lg" aria-hidden="true"></i></a></div>
                 </div>
-          </div> 
+                          
         <footer>
+            
             <nav class="footer_menu">
                 <div class="footer_menu_sub"><h5>Locations</h5>
                 <ul>
@@ -223,17 +247,20 @@ This house in Mumbai has broken the world record of being the most expensive hom
                        </ul>
                  </div>
                  <div class="footer_menu_sub"><h5>Connect with us</h5>
-                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook" aria-hidden="true"></i></a> 
-                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
-                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a> 
-                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype" aria-hidden="true"></i></a> 
-                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+                 <a href="https://www.facebook.com/" title="" target="_blank"><span><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://twitter.com/" title="" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://www.linkedin.com/" title="" target="_blank"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://plus.google.com/" title="" target="_blank"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://www.skype.com/ru/"><i class="fa fa-skype fa-lg" aria-hidden="true"></i></a> 
+                 <a href="https://www.youtube.com/" title="" target="_blank"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a></span>
                  </div>
             </nav>
             <div>&copy; 2017 Created by Nadezhda Gorenok</div>
+            
         </footer>
+        
     </div>
+    
 
     </body>
 </html>

@@ -1,201 +1,25 @@
 @media all and (max-width:677px){
-  #top{
-      visibility: hidden;
-  } 
-  header{
-      height:5em;
-      
-  }
- .menu-hidden{
-    display: block;
-    position: fixed;
-    list-style:none;
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-    width: 200px;
-    background-color: #1976D2;
-    height: 100%;
-    top: 0;
-    right: -200px;
-    transition: right .2s;
-    z-index: 5;
-    
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-  }
-  .menu-ticker {
-    display: none;
-}
-.btn-menu {
-  color: #fff;
-  background-color: #2196F3;
-  padding: 5px;
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  cursor: pointer;
-  transition: right .23s;
-  z-index: 8;
-  width: 25px;
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-}
-.btn-menu span {
-  display: block;
-  height: 5px;
-  background-color: #fff;
-  margin: 5px 0 0;
-  transition: all .1s linear .23s;
-  position: relative;
-}
-.btn-menu span.line_up {
-  margin-top: 0;
-}
-  .menu-ticker:checked ~ .btn-menu {
-  right: 160px;
-}
-.menu-ticker:checked ~ .menu-hidden {
-  right: 0;
-}
-.menu-ticker:checked ~ .btn-menu span.line_up {
-  -webkit-transform: rotate(45deg);
-  top: 10px;
-}
-.menu-ticker:checked ~ .btn-menu span.line_middle {
-  opacity: 0;
-}
-
-.menu-ticker:checked ~ .btn-menu span.line_down {
-  -webkit-transform: rotate(-45deg);
-  top: -10px;
-}
-
-#menu label[for="property"]+ul{
-    position: static !important;
-    margin-top:1em;
-    
-}
-#logo{
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  z-index:2;
-   font-size:75%; 
-}
-
-#logo>.img{
-    
-    padding-left: 0!important;
-    
-}
-
-.search{
-    height:5em;
-}
-.search-ticker-line{
-    display: block!important;
-    position: fixed;
-    right:5em;
-    top: 1em;
-    width: 1em;
-    padding: .5em;
-    text-align: center;
-    color: #fff;
-    cursor:pointer;
-}
-
- form.search-top{
-    display: block;
-    position: fixed;
-    list-style:none;
-    padding: 0;
-    box-sizing: border-box;
-    width: 20em;
-    margin:.5em 0;
-    top: 4.8em;
-    right: -40em;
-    transition: right .2s;
-    z-index: 5;
-   
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-  }
-  .search-ticker:checked ~ .search-top {
-  right:0;
-  
-}
-.search-input{
-      background-color: #FFF;
-      color: #212121;
-      padding: .6em .4em;
-       border-radius: .4em;
-       width: 12em;
-}
-.search-top>button[value="SEARCH"]{
-       color: #fff;
-      background-color: #2196F3;
-      text-align: center;
-      cursor: pointer;
-      padding: .6em .4em;
-      border-radius: .4em;
-  }
-
-.search-middle{
-    display:none;
-}
-.search-ticker{
-   display:none; 
-}
-.search{
-    display:none!important;
-}
-
-.submit{
-    right:.5em!important;
-}
-
  
-    footer{
-        display:none!important;
-    }
     .content>.content-aside {
    
-   margin-top: 3em!important;
-}
+   margin-top: 4em!important;
 }
 
-@media all and (max-width:955px){
-     #menu ul li{
-        flex:1 1 25%;
-    }
-   .content-aside {
-    
-   flex-direction: column!important;
-   margin-top: 8em!important;
-   
+   .about{
+       margin-top: 2em!important;
+   }
 }
+@media all and (max-width:1017px){
+  
 main{
     
-     width:100%!important;
+     min-width:100%!important;
     
 }
-  aside{
-    
-    width:100%!important;
-      
-  }
-   
-   
+aside{
+    min-width:100%!important;
 }
-@media all and (min-width:1200px){
-    .header, .content, footer{ 
-    width: auto;
-    }
 }
-
-
-
 /*Flexbox - content*/
 
 .content{
@@ -204,6 +28,7 @@ main{
    flex-flow: column wrap;
    justify-content: space-around;
    align-items: stretch;
+   
     /*padding: 2em;*/
 }
 
@@ -217,6 +42,7 @@ main{
       align-items: flex-start; 
       padding: 3em;
       margin-top: 8em!important;
+      
 }
 
 
@@ -227,21 +53,19 @@ main{
     flex-flow: column wrap;
     justify-content: space-around;
     align-items:stretch;
-    margin-top: 1em;
-    margin-right: 1em
+    margin-top: 0em;
+    
 }
 
 .about {
-    flex:1;
-    padding-bottom: 0.8em;
+     flex:1;
+    padding:  0;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
     align-self:stretch;
-    letter-spacing: 0.1em;
-    font-size: 1.4em;
     font-weight: 100;
-    margin: 1em 0;
+    margin: 0 0 1em 0;
     color:#BDBDBD; 
-    padding-left: 2em;
+    padding-left: 3em;
 }
 
 .item {
@@ -280,28 +104,25 @@ main{
 /*The end of content flexbox*/
 
 
+
 aside{
-     width: 25%;
+    width:25%;
     align-self: flex-start;
-    margin-top:1.6em;
+    margin: 1em 0 0 0;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: stretch;
-    background-color: #FFF;
 }
 
 .best{
     flex:1;
-    padding-bottom: 0.5em;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
     align-self:stretch;
-    letter-spacing: 0.1em;
-    font-size: 1.4em;
     font-weight: 100;
-    margin: 0.8em 0.8em 0 0.8em;
-    color:#BDBDBD;
-    
+    margin-bottom: 2em;
+    color:#BDBDBD; 
+   
     
 }
 .agents{
@@ -311,29 +132,26 @@ aside{
     display:flex;
     flex-flow: column wrap;
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items:center;
 }
 .agent{
     flex:1;
     align-self: stretch;
     background-color: #fff;
     display:flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    padding:0;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: base-line;
 }
 .photo{
     flex:1;
     align-self:center;
-    padding: 0;
-    padding-left: 1em;
+    padding-left: 0;
 }
 .photo img{
     border-radius: 100%;
     box-shadow: 0 0 0.5px rgba(0,0,0,0.2);
-    width:4em;
-    height:4em;
+    
 }
 .connect{
     flex:2;
@@ -378,11 +196,13 @@ aside{
     font-weight: 500;
      padding-top: 0.5em;
 }
-.connect div:last-of-type
+.connect div:last-of-type a
 {
     color:#212121;
     font-size:0.8em;
+    text-decoration: none;
 }
+
 
 .email{
     flex:2;
@@ -413,8 +233,20 @@ aside{
     border-bottom: 1px solid #FFF;
     
 }
+::-webkit-input-placeholder {
+    color: #fff;
+}
+:-moz-placeholder{ 
+    color: #fff; 
+}
+::-moz-placeholder {
+    color: #fff;
+}
+:-ms-input-placeholder {  
+    color: #fff; 
+}
 .email input[type=submit]{
-    flex:1;
+    
     align-self: flex-end;
     cursor: pointer;
     background-color: #FF4081;
@@ -422,6 +254,7 @@ aside{
     color: #FFF;
     margin-top: 1em;
     padding: 0.5em;
+    
 }
 .email_block .email_block_small:first-child{
     flex:2;

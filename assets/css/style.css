@@ -96,17 +96,13 @@ body {
 }
 #logo{
   position: fixed;
-  top: 5px;
-  left: 5px;
+  top: .5em;
+  left: 1em;
   z-index:2;
-   font-size:75%; 
+  font-size:75%;  
 }
 
-#logo>.img{
-    
-    padding-left: 0!important;
-    
-}
+
 
 .search{
     height:5em;
@@ -194,16 +190,11 @@ body {
 .map-ticker{
    display:none; 
 }
+
 .submit{
     right:.5em!important;
 }
 
-
- /* .logoMenu{
-      display:flex;
-      flex-direction: column;
-      width:100%;
-  }*/
   .big-block{
        flex-direction: column;
        
@@ -234,9 +225,12 @@ body {
        flex-flow: column;
        
    }
+   .content-aside{
+       max-width: 90%;
+   }
    aside{
         min-width: 100%!important;
-        
+       margin:0!important;
         
     }
     .agents{
@@ -463,6 +457,7 @@ display:block;
 margin: auto;
 min-width: 320px;
 max-width: 800px;
+max-height: 80vh;
 width: 100%;
 }
 
@@ -476,8 +471,8 @@ z-index: 10;
 display: block;
 visibility: hidden;
 margin: 0 auto;
-width: 90%;
-min-width: 320px;
+width: 80%;
+min-width: 250px;
 max-width: 800px;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
 position: fixed;
@@ -505,7 +500,7 @@ transition: all ease .5s;
 }
 /* активируем появление окна и затемнение фона */
 .overlay:target+.modal {
-top: 20%; /* положение окна от верха страницы при появлении */
+top: 10vh; /* положение окна от верха страницы при появлении */
 visibility: visible;
 opacity: 1; /* убираем прозрачность */
 }
@@ -582,17 +577,80 @@ transform: rotate(360deg);
     margin:0; padding:0;
     font-size: 1.6em!important;
     font-weight: 500!important;
+    font-family: 'Roboto', cursive;
    text-align: center;
 }
+
+.flip{
+perspective: 1000;
+align-self: center;
+    width: 9em;
+    position: relative;
+    top: 0vw;
+    margin:0; padding:0;
+}
+
+.flip:hover .backfaces{
+
+transform: rotateY(180deg);
+
+}
+
+.flip, .front, .back {
+
+ width: 9em;
+
+
+}
+
+/* здесь находится скорость перевертывания */
 .backfaces {
+
+transition:5s;
+transition-delay: .5s;
+
+transform-style: preserve-3d;
+ 
+
+}
+
+/* скройте обратную сторону во время переворота */
+
+.front, .back {
+
+backface-visibility: hidden;
+position: absolute;
+    top: -0.5em;
+    left: 0vw;
+    width:100%;
+    transform-style: preserve-3d;
+    cursor:pointer;
+}
+
+ 
+/* лицевая сторона размещена над обратной */
+
+.front {
+
+z-index: 2;
+
+}
+
+/* обратная, изначально скрытая сторона */
+
+.back {
+transform: rotateY(180deg);
+}
+/*.backfaces {
     align-self: center;
     width: 9em;
+    
     position: relative;
     margin:0; padding:0;
 }
 .front, .back {
     position: absolute;
-    top: -0.8vw;
+    top: -1vw;
     left: 0vw;
     backface-visibility: hidden;
     transition: 2s;
@@ -615,7 +673,7 @@ transform-style: preserve-3d;
 #flip{
     display:none;
 }
-
+*/
 .submit {
      
     align-self: flex-end;
@@ -1098,7 +1156,7 @@ ul li{
 .fa-star, .fa-user-o, .fa-sign-in, .fa-facebook-square, .fa-facebook, .fa-twitter, .fa-linkedin, .fa-twitter-square, .fa-linkedin-square, .fa-google-plus-square, .fa-skype, .fa-youtube-square, .fa-bars, .fa-map-marker>span, .phone a:hover{
    color: rgba(255, 255, 255, 0.78);
 }
-.fa-facebook-square:hover, .fa-twitter-square:hover, .fa-linkedin-square:hover, .fa-google-plus-square:hover, .fa-youtube-square:hover{
+.fa-facebook-square:hover, .fa-twitter-square:hover, .phone a:hover, .map a:hover,.profile a:hover, .favorities a:hover, .cabinet a:hover,.fa-phone:hover, .fa-facebook:hover, .fa-twitter:hover, .fa-linkedin:hover, .fa-linkedin-square:hover, .fa-google-plus-square:hover, .fa-youtube-square:hover{
     color:#fff;
 }
 .phone .fa-phone{
@@ -1192,7 +1250,7 @@ ul li{
            width:2em;
            box-sizing: border-box;
       }
-       
+     
       .search-content>button[value="search"]{
           width:8em!important;
         }
@@ -1229,14 +1287,7 @@ ul li{
  #extra{
        display:none;}
 
-  /*.search>.search-content button:first-of-type{
-      flex:0.5;
-      background-color: #FF4081;
-      text-align: center;
-      color: #fff;
-       padding: 0.4em 0.4em;
-       cursor: pointer;
-  }*/
+  
   .search>.search-content button{
       flex:3;
       color: #fff;
@@ -1246,107 +1297,7 @@ ul li{
       cursor: pointer;
   }
   
- /* .search_big{
-      display:flex;
-      width:100%;
-      height: 100%;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items:stretch;
-  }
-  
-  .search_small, .search_small_extra{
-      width:55%;
-      align-self: center;
-     
-      
-  }
- .search_smaller{
-     display:flex;
-     height: 100%;
-     width: 100%;
-     flex-flow: row wrap;
-     justify-content: flex-start;
-     align-items: stretch;
-     font-size: 0.8em;
-     text-transform: uppercase;
-     text-align:center;
-     box-shadow: 0 0 5px rgba(0,0,0,0.2);
-     padding-left: 0;
-     
- }
- .search_smaller *{
-     align-self: stretch;
-     list-style:none;
- }
-    
- .search_small_extra{
-     display: none;
- }
- #add:target{
-     display: inline-block;
- }
- * Замена минуса на плюс при открытии экстра-меню 
-.add:visited{
-     background: #fff;
-     content: "\f056";
- }*
- .attribute{
-     flex:3;
-     background-color: #fff;
-     color: rgba(64, 64, 64, 0.86);
-     font-weight: 500;
-     align-self: stretch;
-     padding: 1em 0;
-     margin-bottom: 0.1em; 
-     margin-right:0.1em;
- }
- #type>li>ul>li:before{
-    content:  "\2043";
-    position: relative;
-    left:     -5px;
-    
-}
-#type{
-    display: none;
-    text-align: right;
-}
-#type:target{
-    display:block;
-}
-#status{
-    display: none;
-    text-align: right;
-}
-#status:target{
-    display:block;
-}
-
-.attribute a{
-    color: #2196F3;
-}
- .add{
-     flex:1;
-     background-color: #FF4081;
-      align-self: flex-start; *чтобы не растягивались при разворачивании списка, в медиазапросах изменить н�� stretch*
-      padding: 1em 0;
-       margin-bottom: 0.1em; 
-}
- .fa-plus-circle{
-     color: #fff;
- }
- .find{
-     flex:2;
-     align-self: flex-start;
-     padding: 1em 0;
-     margin-bottom: 0.1em; 
-     margin-right: 0.1em;
-     color: #fff;
-     background-color: #2196F3;
- }
-  
-  */
-  
+ 
 .content-aside{
       flex:6;
       display:flex;
