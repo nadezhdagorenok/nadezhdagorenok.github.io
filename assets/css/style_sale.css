@@ -1,24 +1,29 @@
-@media all and (max-width:678px){
+
+@media all and (max-width:648px){
  
-    .content>div.content-aside {
-   
-   margin-top: 3em!important;
-}
-
-   .about{
-       margin-top: 1em!important;
-   }
-}
-
-@media all and (max-width:1017px){
+  .big-block{
+       flex-direction: column;
+       min-width: 100%;
      
-  .content>.content-aside {
-    
-   flex-direction: column!important;
-   margin-top: 6.5em!important;
+   }
+   .content-aside {
+       max-width: 75%;
+      margin-top: 0em!important;
+       
+   }
+   .container .content>#crumbs{
+     margin-top: 6.5em!important;
    
-}
-main{
+    margin-left: 1em!important;
+   }
+   main{
+       max-width:85%!important;
+   }
+   
+     .content #crumbs{
+     margin-top: .3em!important;
+   }
+    main{
     
      width:100%!important;
     
@@ -30,8 +35,57 @@ main{
       
   }
    
+}
+
+@media all and (max-width:1017px){
+     #menu ul li{
+        flex:1 1 25%;
+    }
+    .content-aside{
+       flex-direction: column;
+       
+   }
+   #crumbs{
+     margin-top: 15em!important;
+     margin-left: 3.5em!important;
+   }
+   .item_first>div:nth-of-type(1),
+   .item_first>div:nth-of-type(2),
+   .item_first>div:nth-of-type(3){
+       margin-bottom:.5em;
+   }
+   main{
+       
+       min-width: 100%;
+       
+   }
+    aside{
+        min-width: 100%;
+        margin-left:2em!important;
+    }
+   .photo img{
+    margin: 25%;
+    
+}
+ .agent{
+     padding-left: 0!important;
+ }  
+.item {
+    
+   flex-direction: column;
    
 }
+.item_first{
+    min-width:100%;
+}
+.item>figure{
+    min-width:100%;
+}
+  
+   
+   
+}
+
 
 
 /*Flexbox - content*/
@@ -53,35 +107,63 @@ main{
       flex-flow: row wrap;
       justify-content: space-around;
       align-items: flex-start; 
-      padding: 3em;
-      margin-top: 5.5em!important;
+      margin: 2em;
+      margin-top: 0em;
 }
 
 
 
+/*.search-middle{
+    min-width: 100%;
+    
+    padding: 0px;
+    padding-left:2em;
+    width: 300px;
+    margin:.5em 0;
+   
+}
+
+.search-input{
+      background-color: #FFF;
+      color: #212121;
+      padding: .6em .4em;
+       border-radius: .4em;
+}
+.search-middle>button[value="SEARCH"]{
+       color: #fff;
+      background-color: #2196F3;
+      text-align: center;
+      cursor: pointer;
+      padding: .6em .4em;
+      border-radius: .4em;
+  }
+*/
 main{
-    width: 70%;
+    width:70%;
+    
     display:flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items:stretch;
-    margin-top: 1em;
+    
 }
+#crumbs{
+     margin: 12em 2em 0 5em;
+     font-size: .8em
+ }
 
-.about {
-    flex:1;
-    padding:  0;
+.rent {
+     flex:1;
+    box-sizing:border-box;
+    padding:  0em;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
     align-self:stretch;
     font-weight: 100;
-    margin: 1em 0;
+    margin: 1em;
     color:#BDBDBD; 
     
 }
-.item>p{
-    font-weight:400;
-    font-size: 1.2em
-}
+
 
 .item {
     flex: 1;
@@ -91,41 +173,106 @@ main{
     flex-flow: row wrap;
     align-items: stretch;
     justify-content: flex-start;
-    background-color: #fff;
-    color: #212121;
-    padding:0.5em 3em;
-    margin: 1em 0em;
-    
+    margin: 1em;
     
 }
-.item>ul{
-    padding:0;
+.item img{
+    width: 100%;
+    height: 100%;
     
 }
-.item>ul>li, p{
-    line-height: 2em;
-    position: relative;
-    word-wrap: break-word;
-    text-align: justify;
+img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.item>figure{
+    flex:2;
+    background-color: #FFF;
+    align-self:stretch;
+    margin:0;
+}
+
+.item .item_first {
+    flex:3;
+    display:flex;
+    flex-flow:column wrap;
+    align-items: stretch;
+    justify-content: space-between;
+   
+}
+.item_first>div>a{
+    text-decoration: none;
+    color: #757575;
     
 }
-.item>ul>li:before{
-    content:"\2714";
-   display:block;
-   position: absolute;
-   left: -1.3em;
-   top: 0;
-   color: #FF4081;
+.item_first>div:nth-of-type(1){
+    font-size: 1.2em;
+    align-self: flex-start;
+    padding: .5em 0 0 .5em;
+    text-transform: uppercase;
     
+}
+.item_first>div:nth-of-type(1)>a:hover{
+    color: #FF4081;
+}
+
+.item_first>div:nth-of-type(2){
+  font-size: 0.8em;
+  color: #bdbdbd; 
+  border-bottom: 0.05em solid #bdbdbd;
+  padding: 0 1em 0.5em 1em;
+  
+}
+.item_first>div:nth-of-type(3){
+   color: #212121;
+   font-size: 0.8em;
+   padding: 0 0 0 1em;
+   line-height: 2em
+}
+
+.item_info{
+    align-self: stretch;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #757575;
+    border-top: 0.05em solid #bdbdbd;
+    background-color: rgba(213, 205, 205, 0.87);
+    padding: 0 1em;
+    
+}
+
+.item_first>.item_info div:first-child, 
+.item_first>.item_info div:nth-of-type(2), 
+.item_first>.item_info div:nth-of-type(3){
+    flex:2;
+    align-self: center;
+    border-right: 0.05em solid #bdbdbd;
+    
+}
+.item_first>.item_info div:first-child{
+    margin-left:.5em;
+}
+.item_first>.item_info div:nth-of-type(2), 
+.item_first>.item_info div:nth-of-type(3){
+    padding-left: 0.5em;
+}
+.item_first>.item_info>div:last-of-type{
+   flex:1; 
+   align-self: center;
+   padding-left: 0.5em;
 }
 
 /*The end of content flexbox*/
 
-
 aside{
      width: 25%;
     align-self: flex-start;
-    margin-top:3.1em;
+    margin-top:1em;
+    margin-bottom:2em!important;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -141,7 +288,7 @@ aside{
     font-weight: 100;
     margin: 0;
     color:#BDBDBD;
-    padding-left: 3em;
+    padding-left: .5em;
     
     
 }
@@ -168,7 +315,9 @@ aside{
     flex:1;
     align-self:center;
     padding: 0;
+    margin:0;
     padding-left: 1em;
+    
 }
 .photo img{
     border-radius: 100%;
@@ -177,13 +326,15 @@ aside{
     height:4em;
 }
 .connect{
-    flex:2;
+    flex:3;
     align-self:flex-start;
     display:flex;
     flex-flow:column wrap;
     justify-content: center;
     align-items:stretch;
+    
     margin-right: 0.8em;
+    padding-left:2em;
 }
 .first{
   border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
@@ -219,6 +370,7 @@ aside{
     font-weight: 500;
      padding-top: 0.5em;
 }
+
 .connect div:last-of-type a
 {
     color:#212121;

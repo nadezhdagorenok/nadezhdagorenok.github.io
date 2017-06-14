@@ -1,32 +1,33 @@
 
-@media all and (max-width:650px){
+@media all and (max-width:646px){
   
  
-   .content-aside {
-       margin-top: 0em!important;
-      
-   }
    
-   .item{
+   .item-detail{
        flex-direction: column!important;
    }
    
    main{
     
      min-width:100%!important;
-    
+   
 }
-  .content aside{
+  .content-aside aside{
     
    min-width:100%!important;
-     margin-top: 1em!important;
-      margin: 0em 2em 0 2em; 
+    
+      margin: 2em 0em!important; 
       
   }
-  .content #crumbs{
-     margin-left: -1em!important;
-     margin-top:9em!important;
+  .content .content-aside{
+      margin-top:0!important;
+  }
+ .content #crumbs{
+   margin-top:7em!important;
+    padding-left:0!important;
 }
+
+  
 
 }
 
@@ -37,80 +38,88 @@
   .content .content-aside{
        flex-direction: column;
        margin-top: 0em!important;
-   }
+      padding-top:0!important;
+      
+  }
    .arrows {
     width: 92% !important;
 }
+#crumbs{
+   margin-top:15em!important;
+    
 }
-  #crumbs{
-     margin-top: 13.5em!important;
-    padding-left: 1em!important
-}
-   
+
+
     .photo img{
     margin: 25%;
 }
 main{
        
-       min-width: 100%;
-       
+    min-width: 100%;
+      
    }
     aside{
-        min-width: 100%;
-        margin-left:1em!important;
+    min-width: 100%;
+        
     }
 
 
-
+}
 /*Flexbox - content*/
 
 .content {
-    flex: 10;
+    width:100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     align-items: stretch;
     /*padding: 2em;*/
-    margin-top: -9vw;
+   
     
 }
 
 .content-aside {
-    flex: 6;
+    flex: 1;
+    box-sizing:border-box;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
-    align-items: flex-start;
-    padding: 5em;
-    margin-top: 5em!important;
+    align-items: center;
+    padding:0em 5em 5em 5em;
+    margin-top: 0em!important;
     
 }
 #crumbs{
-     padding-left: 4.5em;
+   margin: 12em 2em 0 2em;
+     font-size: .8em;
+    padding-left:5.6em;
+   
 }
+ 
 
 main {
-     flex:3;
+    width:70%;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: stretch;
-   
+    margin: 0em;
+    margin-top:0em;
 }
 
 
 .propertyDetail, .description, .position, .facilities, .plan {
-     flex:1;
+    
     box-sizing:border-box;
     padding:  0em;
     border-bottom: 0.05em solid rgba(213, 205, 205, 0.87);
     align-self:stretch;
     font-weight: 100;
-    margin: 1em;
+    margin: 1em 0em 1em 1em;
     color:#BDBDBD;
 }
 
-.item {
+.item-detail, .item-position {
     flex:1;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
@@ -118,46 +127,50 @@ main {
     flex-flow: row wrap;
     align-items: stretch;
     justify-content: space-around;
-    margin: 1em;
+    margin: 1em 0 1em 1em;
     padding:0;
     
    
 }
 .position+div{
    background-color: #fff; 
-   
+   padding: 5px;
 }
 
 
 .description-item, .facilities+div, .plan+figure{
-    flex: 1;
+   
     color:#212121;
     box-sizing: border-box;
     display:flex;
     flex-flow: row wrap;
     align-items: stretch;
-    justify-content: flex-start;
-    margin: .5em 0em 1em 1em;
+    justify-content: center;
+    margin: 1em 0em 1em 1em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     font-size: .9em;
     line-height: 2em;
     padding: .5em;
     
 }
-.plan+figure{
-    width:100%;
+.item-plan figure{
+    width:72vw;
     height:100%;
+    margin:0;
 }
+
+
 
 .item-plan{
     position:relative;
-    width: 72vw;
-    padding:0;
+   align-items:stretch;
+    width:72vw;
+    padding:0em;
+     margin: 1em 1em 1em 1em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
 }
 
-.plan-big {
-        margin:0;
-            }
+
             .min-block{
                 position:  absolute;
                 background: transparent;
@@ -166,7 +179,7 @@ main {
                 border: 5px solid #FF4081;
                 box-sizing: border-box;
                 opacity:0;
-                transition: opacity 1s linear;
+                transition: opacity 2s 1s ease;
             }
             .small{
                position:  absolute;
@@ -175,7 +188,8 @@ main {
                 width: 6vw;
                 height:4.5vw;
                 display:none;
-                transition: all 3s 5s linear;
+                transition: all 2s .6s ease;
+               
             }
             
             .kitchen:hover~.k{
@@ -238,6 +252,7 @@ main {
                 left:22vw;
                 width: 22vw;
                 height:7vw;
+                transition: opacity 2s 1s ease;
             }
             
             .bedroom1{
@@ -658,9 +673,10 @@ transform: rotate(360deg);
 
 
 aside{
-    flex:1;
+    width:25%;
     align-self: flex-start;
-    margin-top:1.9em;
+    margin-top:1em;
+    margin-left:2em;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
