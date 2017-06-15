@@ -13,13 +13,23 @@
        -ms-flex-direction: column!important;
     
            flex-direction: column!important;
-    max-width:85%!important;
+    min-width:100%!important;
+    margin-left:1em!important;
   
 }
+
 
    .container .content{
     
     margin-top:5em !important;
+    
+}
+.content .contact-address,
+.content .contact-form{
+    
+   min-width:92%!important;
+   
+    
 }
 }
 
@@ -44,12 +54,13 @@
 
 .contact-address{
     
-   width:100%!important;
+   min-width:100%!important;
+   
     
 }
   .contact-form{
     
-   width:100%!important;
+   min-width:100%!important;
       margin-top: 2em;
   }
    .content{

@@ -134,10 +134,10 @@ body {
     padding: 0px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 70vw;
+    width: 18em;
     margin:0 0;
     top: 6.7em;
-    right: -35em;
+    right: -20em;
     -webkit-transition: right .2s;
     transition: right .2s;
     z-index: 5;
@@ -269,6 +269,15 @@ body {
     .totop{
         display:none;
     }
+   aside .agent{
+        padding-left:0em!important;
+    }
+     aside .agent .photo{
+         margin-left:0em;
+         padding-left:.5em;
+        
+     }
+    
    
 }
 
