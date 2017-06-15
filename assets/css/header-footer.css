@@ -249,7 +249,7 @@ body {
     .agents{
       flex-wrap:nowrap!important;  
     }
-    main{width:100%!important;}
+    main{min-width:100%!important;}
     .totop{
         display:none;
     }
@@ -422,7 +422,7 @@ body {
     width: 100%;
     margin:0;padding:0;
     align-self: baseline;
-    margin: 0;     
+        
     
 }
 #crumbs ul li{
@@ -435,12 +435,12 @@ body {
     padding:0;
 }
 #crumbs ul li{
-    font-size: 1.2;
+    font-size: 1em;
     color: #757575;
 }
 #crumbs ul li a{
     text-decoration: none;
-    font-size: 1.2;
+    font-size: 1em;
     color: #757575;
 }
 #crumbs ul li a:after {
@@ -662,7 +662,7 @@ transform: rotateY(180deg);
 /* здесь находится скорость перевертывания */
 .backfaces {
 
-transition:3s;
+transition:2.5s;
 transition-delay: .5s;
 
 transform-style: preserve-3d;

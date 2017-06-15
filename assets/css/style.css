@@ -471,7 +471,7 @@ z-index: 10;
 display: block;
 visibility: hidden;
 margin: 0 auto;
-width: 80%;
+width: 90%;
 min-width: 250px;
 max-width: 800px;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
@@ -606,7 +606,7 @@ transform: rotateY(180deg);
 /* здесь находится скорость перевертывания */
 .backfaces {
 
-transition:5s;
+transition:3s;
 transition-delay: .5s;
 
 transform-style: preserve-3d;
@@ -1280,7 +1280,7 @@ ul li{
       }
       
 #extra-button:checked~#extra{
-    display:block;
+    display:flex;
     
 }
 

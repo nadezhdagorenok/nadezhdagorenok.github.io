@@ -17,7 +17,7 @@
    min-width:100%!important;
     
       margin: 2em 0em!important; 
-      
+     
   }
   .content .content-aside{
       margin-top:0!important;
@@ -26,6 +26,7 @@
    margin-top:7em!important;
     padding-left:0!important;
 }
+
 
   
 
@@ -55,11 +56,11 @@
 }
 main{
        
-    min-width: 100%;
+    min-width: 100%!important;
       
    }
     aside{
-    min-width: 100%;
+    min-width: 100%!important;
         
     }
 
@@ -179,7 +180,7 @@ main {
                 border: 5px solid #FF4081;
                 box-sizing: border-box;
                 opacity:0;
-                transition: opacity 2s 1s ease;
+                transition: opacity 2s .5s ease;
             }
             .small{
                position:  absolute;
@@ -365,7 +366,7 @@ visibility: hidden;
 margin: 0 auto;
 width: 90%;
 min-width: 300px;
-max-width: 600px;
+max-width: 800px;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
 position: fixed;
 padding: 15px;
@@ -392,7 +393,7 @@ transition: all ease .5s;
 }
 /* активируем появление окна и затемнение фона */
 .overlay:target+.modal {
-top: 5%; /* положение окна от верха страницы при появлении */
+top: 10%; /* положение окна от верха страницы при появлении */
 visibility: visible;
 opacity: 1; /* убираем прозрачность */
 }

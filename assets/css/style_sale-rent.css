@@ -8,7 +8,7 @@
    }
    .content-aside {
        max-width: 85%!important;
-      margin-top: 0em!important;
+      margin: 0em!important;
        
    }
    .container .content>#crumbs{
@@ -16,9 +16,7 @@
    
     margin-left: 1em!important;
    }
-   main{
-       max-width:85%!important;
-   }
+   
    
      .content #crumbs{
      margin-top: .3em!important;
@@ -33,6 +31,9 @@
     width:100%!important;
     
       
+  }
+  .photo{
+    padding: 0 1em!important;
   }
    
 }
@@ -107,8 +108,8 @@
       flex-flow: row wrap;
       justify-content: space-around;
       align-items: flex-start; 
-      margin: 0;
-      
+      margin: 0 2em;
+     
 }
 
 
@@ -145,7 +146,7 @@ main{
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items:stretch;
-    
+    margin-bottom: 1em;
 }
 #crumbs{
      margin: 12em 2em 0 5em;
