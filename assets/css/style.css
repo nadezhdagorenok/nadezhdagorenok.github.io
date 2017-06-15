@@ -17,7 +17,7 @@ body {
 .divider-color         { border-color: #BDBDBD; }
 .text-light-color      { color: rgba(255, 255, 255, 0.78); }
 
-@media all and (max-width:650px){
+@media all and (max-width:699px){
   #top{
       visibility: hidden;
   } 
@@ -1397,7 +1397,7 @@ ul li{
       label[for="extra-button"]{
           cursor:pointer;
           background-color:#FF4081;
-           padding: 0.5em 0.4em;
+           padding: 0.3em 0.4em;
            text-align: center;
            color: #fff;
            width:2em;
@@ -1430,7 +1430,7 @@ ul li{
               align-items: center;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      width:50em;
+      width:42.1em;
       margin:0;
       padding:0; 
       }
@@ -1445,7 +1445,7 @@ ul li{
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
           margin:0;
-         width: 12.5em!important;
+         width: 12.58em!important;
       }
       
 #extra-button:checked~#extra{

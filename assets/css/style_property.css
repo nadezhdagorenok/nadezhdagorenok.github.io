@@ -55,6 +55,7 @@
 }
 #crumbs{
    margin-top:15em!important;
+   padding-left: 5.5em!important;
     
 }
 
@@ -120,7 +121,7 @@ main{
 #crumbs{
    margin: 12em 2em 0 2em;
      font-size: .8em;
-    padding-left:5.5em;
+    padding-left:6em;
    
 }
  
